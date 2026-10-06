@@ -1,0 +1,23 @@
+:root {
+  --jz-canvas: #f4f4f0;
+  --jz-surface: #ffffff;
+  --jz-ink: #0a0b0d;
+  --jz-muted: #5d6168;
+  --jz-accent: #335cff;
+  --jz-accent-soft: #dfe5ff;
+  --jz-success: #177a4b;
+  --jz-warning: #9b6414;
+  --jz-danger: #b83232;
+  --jz-radius-control: 999px;
+  --jz-content-max: 1440px;
+  --jz-space-1: 0.25rem;
+  --jz-space-2: 0.5rem;
+  --jz-space-3: 0.75rem;
+  --jz-space-4: 1rem;
+  --jz-space-6: 1.5rem;
+  --jz-space-8: 2rem;
+  --jz-space-12: 3rem;
+  --jz-space-16: 4rem;
+  --jz-space-24: 6rem;
+  --jz-space-32: 8rem;
+}
