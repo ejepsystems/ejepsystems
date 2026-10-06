@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@jeclazon/ui/tokens.css";
+@import "../../../packages/ui/src/tokens.css";
 
 :root {
   --canvas: var(--jz-canvas);
