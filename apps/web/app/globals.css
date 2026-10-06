@@ -1,17 +1,18 @@
 @import "tailwindcss";
+@import "@jeclazon/ui/tokens.css";
 
 :root {
-  --canvas: #f4f4f0;
-  --surface: #ffffff;
-  --surface-strong: #0a0b0d;
-  --text: #0a0b0d;
-  --text-muted: #5d6168;
+  --canvas: var(--jz-canvas);
+  --surface: var(--jz-surface);
+  --surface-strong: var(--jz-ink);
+  --text: var(--jz-ink);
+  --text-muted: var(--jz-muted);
   --text-on-dark: #f7f7f3;
   --line: rgba(10, 11, 13, 0.14);
   --line-strong: rgba(10, 11, 13, 0.35);
-  --accent: #335cff;
-  --accent-soft: #dfe5ff;
-  --max: 1440px;
+  --accent: var(--jz-accent);
+  --accent-soft: var(--jz-accent-soft);
+  --max: var(--jz-content-max);
 }
 
 * { box-sizing: border-box; }
