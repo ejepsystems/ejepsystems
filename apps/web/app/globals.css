@@ -123,7 +123,8 @@ a:focus-visible, button:focus-visible {
 
 .statement { background: var(--surface-strong); color: var(--text-on-dark); padding-block: clamp(110px, 14vw, 220px); }
 .statement-grid, .foundation-grid { display: grid; grid-template-columns: .38fr 1fr; gap: 80px; }
-.section-index { margin: 8px 0 0; color: #8f949d; }
+.section-index { margin: 8px 0 0; color: #565b63; }
+.statement .section-index { color: #aeb2b9; }
 .statement h2, .section-heading h2, .foundation h2, .status h2 {
   margin: 0; font-size: clamp(2.8rem, 5.8vw, 6.4rem); line-height: .98; letter-spacing: -.06em; font-weight: 500;
 }
@@ -152,9 +153,9 @@ a:focus-visible, button:focus-visible {
 
 .status { padding-block: clamp(100px, 12vw, 170px); }
 .status-panel { background: var(--accent); color: white; min-height: 430px; padding: clamp(34px, 5vw, 72px); display: grid; grid-template-columns: 1fr .62fr; gap: 60px; align-items: end; border-radius: 2px; }
-.status-panel .eyebrow { color: var(--accent-soft); }
+.status-panel .eyebrow { color: #ffffff; }
 .status-panel h2 { max-width: 800px; }
-.status-panel > p { margin: 0; color: #e7ebff; font-size: 1.04rem; line-height: 1.6; max-width: 560px; }
+.status-panel > p { margin: 0; color: #ffffff; font-size: 1.04rem; line-height: 1.6; max-width: 560px; }
 
 .site-footer { background: var(--surface-strong); color: var(--text-on-dark); padding: 70px 0 90px; }
 .footer-grid { display: grid; grid-template-columns: 1fr .5fr .7fr; gap: 60px; border-top: 1px solid #303238; padding-top: 32px; }
