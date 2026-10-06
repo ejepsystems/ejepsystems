@@ -1,0 +1,11 @@
+{
+  "name": "ejepsystems-platform",
+  "private": true,
+  "packageManager": "pnpm@10.16.1",
+  "scripts": {
+    "dev": "pnpm --filter @jeclazon/web dev",
+    "build": "pnpm --filter @jeclazon/web build",
+    "lint": "pnpm --filter @jeclazon/web lint",
+    "typecheck": "pnpm --filter @jeclazon/web typecheck"
+  }
+}
