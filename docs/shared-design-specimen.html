@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jeclazon shared design specimen</title></head><body>
+<div id="jz-foundation-preview" data-theme="light">
+  <style>
+    #jz-foundation-preview{--pv-bg:#f4f4f0;--pv-panel:#fff;--pv-ink:#0a0b0d;--pv-muted:#5d6168;--pv-line:#c9cbd0;--pv-blue:#335cff;--pv-on:#fff;background:var(--pv-bg);color:var(--pv-ink);font:16px/1.6 Arial,sans-serif;padding:clamp(20px,4vw,44px);border-radius:12px}
+    #jz-foundation-preview[data-theme=dark]{--pv-bg:#0a0b0d;--pv-panel:#17191d;--pv-ink:#f4f4f0;--pv-muted:#aeb2b9;--pv-line:#3b4049;--pv-blue:#a8baff;--pv-on:#0a0b0d}
+    #jz-foundation-preview *{box-sizing:border-box}
+    #jz-foundation-preview header{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--pv-line);padding-bottom:22px;flex-wrap:wrap}
+    #jz-foundation-preview .pv-wordmark{font-size:20px;font-weight:600;letter-spacing:-.06em}
+    #jz-foundation-preview button{font:inherit;min-height:44px;padding:8px 16px;border:1px solid var(--pv-muted);border-radius:8px;color:var(--pv-ink);background:var(--pv-panel)}
+    #jz-foundation-preview .pv-kicker{font:12px/1.5 ui-monospace,monospace;color:var(--pv-muted);text-transform:uppercase;letter-spacing:.08em;margin:28px 0 14px}
+    #jz-foundation-preview h2{font-size:clamp(36px,6vw,64px);font-weight:500;letter-spacing:-.055em;line-height:1.04;margin:0 0 22px;max-width:650px}
+    #jz-foundation-preview .pv-lead{font-size:20px;max-width:580px;color:var(--pv-muted);margin:0 0 28px}
+    #jz-foundation-preview .pv-palette{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:28px 0}
+    #jz-foundation-preview .pv-swatch{height:64px;border:1px solid var(--pv-line);border-radius:8px;margin-bottom:8px}
+    #jz-foundation-preview .pv-caption{font:12px/1.5 ui-monospace,monospace;color:var(--pv-muted);overflow-wrap:anywhere}
+    #jz-foundation-preview .pv-section{border-top:1px solid var(--pv-line);margin-top:28px;padding-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    #jz-foundation-preview h3{font-size:24px;line-height:1.2;font-weight:500;letter-spacing:-.03em;margin:10px 0 16px}
+    #jz-foundation-preview .pv-controls{display:flex;gap:12px;flex-wrap:wrap}
+    #jz-foundation-preview button.pv-primary{background:var(--pv-blue);color:var(--pv-on);border-color:var(--pv-blue)}
+    #jz-foundation-preview .pv-rows{padding:0;margin:0;list-style:none}
+    #jz-foundation-preview .pv-rows li{padding:10px 0;border-bottom:1px solid var(--pv-line);display:flex;justify-content:space-between;gap:16px}
+    #jz-foundation-preview .pv-rows span{color:var(--pv-muted)}
+    #jz-foundation-preview .pv-foot{margin-top:28px;padding-top:18px;border-top:1px solid var(--pv-line);color:var(--pv-muted);font-size:12px}
+    @media(max-width:540px){#jz-foundation-preview .pv-section{grid-template-columns:1fr}#jz-foundation-preview .pv-palette{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  </style>
+  <header><span class="pv-wordmark">Jeclazon</span><button type="button" id="pv-theme" aria-pressed="false">Dark appearance</button></header>
+  <p class="pv-kicker">Shared foundation · proposed design standard</p>
+  <h2>One foundation.<br>Independent identities.</h2>
+  <p class="pv-lead">Precise typography. Quiet surfaces. Consistent interactions across every project.</p>
+  <div class="pv-palette" aria-label="Semantic palette">
+    <div><div class="pv-swatch" style="background:var(--pv-bg)"></div>Canvas<div class="pv-caption">Warm neutral</div></div>
+    <div><div class="pv-swatch" style="background:var(--pv-panel)"></div>Surface<div class="pv-caption">Clear grouping</div></div>
+    <div><div class="pv-swatch" style="background:var(--pv-ink)"></div>Ink<div class="pv-caption">Primary text</div></div>
+    <div><div class="pv-swatch" style="background:var(--pv-muted)"></div>Secondary<div class="pv-caption">Supporting text</div></div>
+    <div><div class="pv-swatch" style="background:var(--pv-blue)"></div>Accent<div class="pv-caption">Purposeful action</div></div>
+  </div>
+  <div class="pv-section">
+    <section><div class="pv-caption">EXPRESSION</div><h3>Editorial web.<br>Focused app.<br>Precise admin.</h3><div class="pv-controls"><button type="button" class="pv-primary" id="pv-primary">Inspect control</button><button type="button" id="pv-secondary">Inspect spacing</button></div><p id="pv-result" class="pv-caption" aria-live="polite">44px controls · visible keyboard focus · 8px radius</p></section>
+    <section><div class="pv-caption">SYSTEM ROLES</div><ul class="pv-rows"><li>Display <span>48–112px / 500</span></li><li>Section <span>28–36px / 500</span></li><li>Body <span>16px / 1.6</span></li><li>Spacing <span>4px base</span></li><li>Motion <span>120 / 200 / 320ms</span></li></ul></section>
+  </div>
+  <div class="pv-foot">Design specimen · product brands retain their own accents and expression · infrastructure status is recorded separately</div>
+  <script>
+    (()=>{
+      const root=document.getElementById('jz-foundation-preview');
+      const toggle=root.querySelector('#pv-theme');
+      const result=root.querySelector('#pv-result');
+      toggle.addEventListener('click',()=>{const dark=root.dataset.theme!=='dark';root.dataset.theme=dark?'dark':'light';toggle.setAttribute('aria-pressed',String(dark));toggle.textContent=dark?'Light appearance':'Dark appearance';});
+      root.querySelector('#pv-primary').addEventListener('click',()=>{result.textContent='Primary control: 44px minimum height, clear label, semantic accent.';});
+      root.querySelector('#pv-secondary').addEventListener('click',()=>{result.textContent='Spacing: 4, 8, 12, 16, 24, 32, 48, 64, 96 and 128px.';});
+    })();
+  </script>
+</div>
+
+</body></html>

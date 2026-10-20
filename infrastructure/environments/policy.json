@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "declaration-only",
+  "isolation": "per-project-per-environment",
+  "environments": {
+    "development": { "productionCredentials": false, "data": "synthetic", "deploymentApproval": false },
+    "preview": { "productionCredentials": false, "data": "synthetic", "access": "protected", "deploymentApproval": false },
+    "production": { "productionCredentials": true, "data": "project-owned", "deploymentApproval": true, "verifiedRevision": true, "rollbackRequired": true }
+  },
+  "runtime": { "networkDefault": "deny", "filesystemDefault": "project-only", "crossProjectAccess": false },
+  "logging": { "secrets": false, "personalDataDefault": "redact", "requestIds": true }
+}
