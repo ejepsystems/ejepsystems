@@ -36,3 +36,13 @@ EJEP Systems remains legal/corporate entity; Pectrium is the approved public bra
 
 ## Rollback
 Keep baseline SHA and branch history; revert individual commits if verification fails. Do not force-push main, rotate domains, or alter legal filings.
+
+## Staged implementation (2026-10-21)
+- Updated apps/web homepage, header, footer, architecture illustration, and SEO metadata to Pectrium.
+- Updated workspace names in package.json, apps/web/package.json and packages/ui/package.json to @pectrium/*.
+- Renamed CSS token namespace from --jz-* to --pct-* consistently in apps/web/app/globals.css and packages/ui/src/tokens.css without changing token values.
+- Added pull-request validation workflow for legacy source references, pnpm lint, typecheck, and build.
+- Historical Jeclazon authority documents remain unchanged. EJEP Systems legal identity and project brands remain unchanged.
+- GitHub search indexing did not provide a complete repository tree or exhaustive recursive inventory; the workflow's tracked-file git grep will provide broader coverage when it runs.
+- At the time of reporting, no GitHub Actions workflow run was returned for the feature-branch head. The Vercel commit status was **failure** with a build-rate-limit upgrade URL; this is not evidence of a failed application build.
+- Build, lint, typecheck, and browser validation are **NOT VERIFIED**. No production deployment or merge has occurred.
