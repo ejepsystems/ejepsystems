@@ -21,11 +21,14 @@ jobs:
           node-version: '22'
       - name: Inventory legacy brand references
         run: |
-          git grep -n -i 'jeclazon' -- ':!docs/**' ':!README.md' || true
-          if git grep -n -i 'jeclazon' -- apps packages package.json; then
+          echo 'Active source references (must be empty):'
+          if git grep -n -i -E 'jeclazon|--jz-|--pct-/' -- apps packages package.json; then
             echo 'Active source still contains legacy brand references'
             exit 1
           fi
+      - name: Validate shared token definitions
+        run: |
+          node -e 'const fs=require("fs"); const t=fs.readFileSync("packages/ui/src/tokens.css","utf8"); const c=fs.readFileSync("apps/web/app/globals.css","utf8"); const names=new Set([...t.matchAll(/(--pct-[a-z0-9-]+)\\s*:/g)].map(m=>m[1])); const refs=[...c.matchAll(/var\\((--pct-[a-z0-9-]+)\\)/g)].map(m=>m[1]); const missing=refs.filter(n=>!names.has(n)); if(missing.length||t.includes("--pct-/")||c.includes("--pct-/")){ console.error("Invalid or undefined tokens",missing);process.exit(1)} console.log("Validated",names.size,"definitions and",refs.length,"references")'
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
       - name: Lint
