@@ -7,11 +7,11 @@ const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Jeclazon — Technology company",
-    template: "%s — Jeclazon",
+    default: "Pectrium — Technology company",
+    template: "%s — Pectrium",
   },
   description:
-    "Jeclazon is being established as a public-facing technology company and master technology brand.",
+    "Pectrium is being established as a public-facing technology company and master technology brand.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
