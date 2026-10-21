@@ -7,11 +7,11 @@ const nodes = [
 
 export function SystemVisual() {
   return (
-    <div className="system-visual" aria-label="Jeclazon company architecture illustration">
+    <div className="system-visual" aria-label="Pectrium company architecture illustration">
       <div className="visual-orbit" aria-hidden="true" />
       <div className="visual-core">
-        <span className="core-mark">J</span>
-        <span>Jeclazon</span>
+        <span className="core-mark">P</span>
+        <span>Pectrium</span>
       </div>
       {nodes.map((node) => (
         <div className={node.className} key={node.label}>
