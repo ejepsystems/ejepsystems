@@ -1,0 +1,38 @@
+name: Pectrium Phase 02 validation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.16.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Inventory legacy brand references
+        run: |
+          git grep -n -i 'jeclazon' -- ':!docs/**' ':!README.md' || true
+          if git grep -n -i 'jeclazon' -- apps packages package.json; then
+            echo 'Active source still contains legacy brand references'
+            exit 1
+          fi
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Build
+        run: pnpm build
