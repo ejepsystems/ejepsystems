@@ -13,7 +13,7 @@ The previous Jeclazon authority documents in `docs/` are preserved as historical
 
 ## Repository status
 
-This repository includes a pnpm workspace and an existing Next.js corporate web application. Some code, content, package identifiers, and documentation still refer to Jeclazon. Those references are **migration work**, not approval to keep using the retired brand. The existing `@jeclazon/web` technical package identifier must not be changed independently of root scripts, workspace references, and lockfiles.
+This repository includes a pnpm workspace and an existing Next.js corporate web application. The reviewed web source, workspace package names, root scripts, and shared design tokens have been staged under Pectrium on this feature branch. Historical Jeclazon documentation remains unchanged. Complete recursive inventory, build verification, and deployment review remain outstanding.
 
 The proposed wider architecture (shared UI, configuration, project starters, restricted admin, optional APIs and infrastructure) must be verified against actual source before being described as implemented.
 
@@ -31,4 +31,4 @@ Quincestone, Emperor Armani, and Clesla retain their identities. No legal owners
 
 ## Migration status
 
-Phase 02 is documentation and audit preparation on a feature branch. The public site and technical package names have **not** been migrated. See the migration plan for confirmed references, audit limitations and remaining work.
+Phase 02 source migration is staged on a feature branch, not merged or publicly deployed. Runtime build/lint/typecheck verification remains pending. See the migration plan for confirmed references, audit limitations and remaining work.
