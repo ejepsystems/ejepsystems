@@ -20,7 +20,7 @@ test('all module combinations generate only selected roles and refuse overwrites
       assert.deepEqual((await readdir(path.join(destination, 'apps'))).sort(), Object.keys(modules).filter(key => modules[key]).sort());
       assert.deepEqual(JSON.parse(await readFile(path.join(destination, 'project.json'), 'utf8')).modules, modules);
       await assert.rejects(createProject(config, destination), { code: 'EEXIST' });
-      assert.match(await readFile(path.join(destination, 'README.md'), 'utf8'), /Planning scaffold only/);
+      assert.match(await readFile(path.join(destination, 'README.md'), 'utf8'), /Runnable local foundation/);
     }
   } finally { await rm(root, { recursive: true, force: true }); }
 });

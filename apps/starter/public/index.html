@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Configure your next project. Reuse the foundation. An interactive project starter by EJEP Systems.">
+  <title>Project Starter · EJEP Systems</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="./" class="wordmark" aria-label="EJEP Systems Project Starter home"><span class="logo">E<span>↗</span></span><span>EJEP <b>SYSTEMS</b></span></a>
+    <div class="header-right"><span class="workspace-label">BUILD WORKSPACE</span><span class="private-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Private workspace</span></div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow"><span></span> PROJECT STARTER <span class="version">/ 01</span></p><h1 id="page-title">Build once. <span>Start anything.</span></h1><p class="intro-copy">Your next project, with the foundations already in place.<br class="desktop-br"> Make it yours. Choose your modules. Take it from here.</p></div>
+      <div class="intro-note"><span class="spark">✳</span><p>One foundation.<br><strong>Endless possibilities.</strong></p></div>
+    </section>
+    <section class="builder" aria-label="Project starter configurator">
+      <div class="config-card">
+        <div class="card-heading"><div><span class="section-number">01</span><h2>Make it yours</h2></div><span class="draft-status" id="save-status">Draft ready</span></div>
+        <form id="config-form" novalidate>
+          <div class="identity-fields">
+            <label for="project-name">Project name <span class="required">*</span></label>
+            <input id="project-name" name="name" maxlength="64" autocomplete="off" value="New Project" placeholder="e.g. New Project" aria-describedby="project-slug">
+            <p id="project-slug" class="field-note">Repository <span>new-project</span></p>
+            <div class="field-grid"><div><label for="brand-name">Brand name <span class="required">*</span></label><input id="brand-name" name="brand" maxlength="64" autocomplete="off" value="New Project" placeholder="Your product brand"></div><div><label for="brand-color">Brand color</label><div class="color-input"><input id="brand-color" type="color" value="#335cff" aria-label="Choose brand color"><input id="color-hex" maxlength="7" value="#335CFF" aria-label="Brand color hex code" spellcheck="false"></div></div></div>
+            <label for="tagline">Tagline <span class="optional">Optional</span></label><input id="tagline" name="tagline" maxlength="120" value="A new idea. A strong foundation." placeholder="What does your project stand for?">
+          </div>
+          <fieldset class="module-fieldset"><legend><span>Choose your modules</span><span class="selection-count" id="selection-count">3 selected</span></legend><p class="field-note module-note">Include what you need. Keep the common foundation.</p>
+            <div class="module-grid">
+              <label class="module selected"><input type="checkbox" name="module" value="web" checked><span class="module-icon" data-icon="web"></span><span class="module-text"><strong>Web</strong><small>Public website</small></span><span class="check-icon" aria-hidden="true"></span></label>
+              <label class="module selected"><input type="checkbox" name="module" value="app" checked><span class="module-icon" data-icon="app"></span><span class="module-text"><strong>App</strong><small>Local launch checklist</small></span><span class="check-icon" aria-hidden="true"></span></label>
+              <label class="module selected"><input type="checkbox" name="module" value="admin" checked><span class="module-icon" data-icon="admin"></span><span class="module-text"><strong>Admin</strong><small>Local theme inspector</small></span><span class="check-icon" aria-hidden="true"></span></label>
+              <label class="module"><input type="checkbox" name="module" value="api"><span class="module-icon" data-icon="api"></span><span class="module-text"><strong>API <em>OPTIONAL</em></strong><small>Local API endpoints</small></span><span class="check-icon" aria-hidden="true"></span></label>
+            </div>
+          </fieldset>
+          <div class="included"><span data-icon="layers"></span><p><strong>The foundation comes with you.</strong><br>Shared UI, brand tokens, config & local runtime.</p><span class="included-tag">INCLUDED</span></div>
+          <div class="export-area"><p id="validation" role="alert" hidden></p><button class="download-button" id="download" type="submit"><span data-icon="download"></span><span>Download starter</span><span class="button-tail">.zip <span>↗</span></span></button><div class="export-meta"><span>Runnable JavaScript + Node.js starter</span><button id="reset" type="button">Reset draft</button></div></div>
+        </form>
+      </div>
+      <div class="preview-column">
+        <div class="preview-heading"><div><span class="section-number">02</span><h2>See your foundation</h2></div><span class="live-badge"><i></i>LIVE PREVIEW</span></div>
+        <div class="preview-card">
+          <div class="preview-tabs" role="tablist" aria-label="Starter preview"><button id="tab-structure" role="tab" aria-controls="structure-panel" aria-selected="true" tabindex="0"><span data-icon="folder"></span>Structure</button><button id="tab-brand" role="tab" aria-controls="brand-panel" aria-selected="false" tabindex="-1"><span data-icon="palette"></span>Brand preview</button><button id="tab-readme" role="tab" aria-controls="readme-panel" aria-selected="false" tabindex="-1"><span data-icon="file"></span>README</button></div>
+          <div id="structure-panel" role="tabpanel" aria-labelledby="tab-structure"><div class="repo-root"><span class="root-folder" data-icon="folder"></span><strong id="root-name">new-project</strong><span class="root-label">PROJECT ROOT</span></div><div id="file-tree" class="file-tree"></div><div class="tree-footer"><span id="file-count">Preparing files…</span><button id="copy-structure" type="button"><span data-icon="copy"></span><span>Copy tree</span></button></div></div>
+          <div id="brand-panel" role="tabpanel" aria-labelledby="tab-brand" hidden><div class="brand-canvas"><div class="sample-header"><span class="sample-logo" id="sample-initials">NP</span><strong id="sample-brand">New Project</strong><span>STARTER</span></div><div class="sample-content"><span class="sample-eyebrow">YOUR NEXT CHAPTER</span><h3 id="sample-tagline">A new idea.<br>A strong foundation.</h3><p>A consistent identity across every module, built on one shared design system.</p><span class="sample-cta">Explore the possibilities <span>↗</span></span></div><div class="sample-modules" id="sample-modules"></div></div><div class="brand-caption"><span>Shared tokens → every selected interface</span><span id="sample-color">#335CFF</span></div></div>
+          <div id="readme-panel" role="tabpanel" aria-labelledby="tab-readme" hidden><div class="readme-toolbar"><span>README.md</span><button id="copy-readme" type="button" aria-label="Copy README"><span data-icon="copy"></span>Copy</button></div><pre id="readme-content"></pre></div>
+        </div>
+        <div class="preview-bottom"><span data-icon="check"></span><p><strong>Same foundation. Your product.</strong><br>Rename, rebrand, and extend the parts that matter.</p></div>
+      </div>
+    </section>
+    <section class="quickstart" aria-labelledby="quickstart-title">
+      <div><p class="eyebrow">FROM DOWNLOAD TO RUNNING</p><h2 id="quickstart-title">Your next three steps.</h2></div>
+      <ol><li><strong>Download &amp; extract</strong><p>Your ZIP contains exactly the files shown above.</p></li><li><strong>Open a terminal in the extracted folder</strong><p>Requires Node.js 22 or later. No install or service credentials needed.</p><code>npm run dev</code></li><li><strong>Open your selected modules</strong><p>Web :3100 · App :3101 · Admin :3102 · API :3103/health</p></li></ol>
+      <p class="local-notice">Local development shells only. App and admin have no sign-in or authorization. Configure product features and protected infrastructure before hosting them.</p>
+    </section>
+    <section class="foundation" aria-labelledby="foundation-title"><div><p class="eyebrow">BUILT TO BE REUSED</p><h2 id="foundation-title">Start ahead.<br>Stay consistent.</h2></div><div class="foundation-item"><span data-icon="palette"></span><h3>One brand system</h3><p>Change shared tokens once.<br>Every interface follows.</p></div><div class="foundation-item"><span data-icon="blocks"></span><h3>Only what you need</h3><p>Independent modules.<br>No extra scaffolding.</p></div><div class="foundation-item"><span data-icon="code"></span><h3>Ready to make yours</h3><p>Runnable files, clear boundaries.<br>Product features come next.</p></div></section>
+  </main>
+  <footer class="site-footer"><span><b>EJEP SYSTEMS</b> <span class="footer-dot">·</span> Intelligent Systems. Global Possibilities.</span><span>Project Starter <span class="footer-dot">/</span> v1.1</span></footer>
+  <div id="toast" role="status" aria-live="polite" class="toast"></div>
+  <dialog id="file-dialog"><div class="dialog-heading"><strong id="file-title"></strong><button id="close-file" type="button" aria-label="Close file preview">×</button></div><pre id="file-content"></pre><div class="dialog-footer">This exact file is included in your download.</div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

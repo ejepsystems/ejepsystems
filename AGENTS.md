@@ -8,6 +8,6 @@ Read docs/00_JECLAZON_MASTER_BRAND_COMPANY_ARCHITECTURE.md, docs/01_JECLAZON_COR
 - Never claim architecture, scaffolding, or policy files are deployed infrastructure.
 - Use semantic design tokens; keep business logic out of shared UI.
 - Work on a branch and open a reviewable PR. Production promotion is a separate action.
-- Run node --test scripts/*.test.mjs and node scripts/check-foundation.mjs for foundation changes. Run existing web lint, typecheck, and build for web changes when dependencies are available. Report blocked checks accurately.
+- Run node scripts/build-starter.mjs, then node --test scripts/*.test.mjs and node scripts/check-foundation.mjs for foundation changes. Run existing web lint, typecheck, and build for web changes when dependencies are available. Report blocked checks accurately.
 - Do not commit secrets, production data, or unverified legal wording.
 - Do not scaffold speculative service integrations or bypass deny-by-default policies.

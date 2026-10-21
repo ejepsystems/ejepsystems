@@ -10,11 +10,12 @@ The repository already has a Next.js corporate web implementation and shared CSS
 | Corporate web source | Existing | apps/web; live deployment not audited |
 | Shared design roles | Implemented, proposed | packages/ui/src/tokens.css; automated contrast pairs |
 | Product manifest contract | Implemented | packages/project-foundation/src/manifest.mjs |
-| Safe portable scaffolding | Implemented | scripts/create-project.mjs; node tests |
+| Runnable local module export | Implemented | Shared browser/CLI generator; ZIP round-trip and runtime tests |
+| Internal starter interface | Implemented | apps/starter; private hosted source synchronized separately |
 | Environment policy declarations | Implemented | infrastructure/environments/policy.json; not provider enforcement |
 | Foundation CI definition | Implemented | .github/workflows/foundation-quality.yml; remote outcome recorded in PR |
 | Reproducible full web dependencies | Implemented and locally verified | pnpm-lock.yaml; pnpm 10.16.1 frozen install passed |
-| Admin, customer app, dedicated API | Not implemented here | Product-specific working functionality and authorization required |
+| Production admin, customer app, dedicated API | Not implemented here | Export includes local development shells only; product features and authorization required |
 | Hosting access and preview protection | Unverified | Verify per deployment; do not treat robots rules as protection |
 | Required branch checks | Pending | Baseline main reports protected=false; configure repository rules |
 | Credentials and secret rotation | Pending | Populate provider secret stores; no secrets in source |
@@ -35,3 +36,9 @@ Record project, environment, accountable owner, Git revision, dependency lock re
 - Passed: pnpm 10.16.1 frozen install, web lint, TypeScript, and optimized production build. Local Node was 24.19.0; the workflows target Node 22 and their remote results must be checked independently.
 - Design specimen: docs/shared-design-specimen.html; syntax checked. Browser rendering/interaction QA remains unverified because the Chromium download failed in this environment. This is a proposed design specimen, not a published website.
 - No production deployment, provider configuration, or database migration was performed.
+
+## Starter update — 2026-10-21
+
+The private configurator is connected to the repository manifest and generator. ZIPs contain runnable local shells with separate localhost ports, shared styles and browser behavior, optional read-only API endpoints, and setup documentation. App/admin have no authentication and cannot be called production-ready. The configuration/structure/file/README previews operate entirely in the browser; draft storage stays on the current device.
+
+Passed: all 15 module combinations, form adapter validation, local import integrity, ZIP checksums and Unicode round-trip, generated server and browser syntax, running web/app/admin shells, API responses, rejection of source-file exposure, write-method rejection, and existing foundation policy/contrast checks. Browser rendering, keyboard interaction, and viewport QA remain unverified because the required control-browser capability is unavailable in this managed environment.

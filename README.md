@@ -22,7 +22,7 @@ Exact legal wording must follow the actual registered structure and applicable l
 
 ## Current repository truth
 
-This repository contains the Jeclazon corporate web source in `apps/web`, shared design tokens in `packages/ui`, and a dependency-free project-manifest validator and planning-scaffold generator. Environment policy files and quality workflows are repository implementation, not evidence of deployed infrastructure. See `docs/04_INFRASTRUCTURE_READINESS.md` for the capability ledger.
+This repository contains the Jeclazon corporate web source in `apps/web`, shared design tokens in `packages/ui`, and a dependency-free project-manifest validator and runnable local starter generator and the internal configuration interface in `apps/starter`. Environment policy files and quality workflows are repository implementation, not evidence of deployed infrastructure. See `docs/04_INFRASTRUCTURE_READINESS.md` for the capability ledger.
 
 Documentation must never present planned capabilities as operational.
 
@@ -35,7 +35,7 @@ Read these authorities in order:
 3. `docs/02_JECLAZON_INFORMATION_ARCHITECTURE_COMMUNICATION.md`
 4. `docs/03_SHARED_FOUNDATION_STANDARD.md`
 
-Run `node --test scripts/*.test.mjs` and `node scripts/check-foundation.mjs` for the foundation checks. The project scaffold command and its boundaries are documented in the shared foundation standard.
+Build the internal tool with `node scripts/build-starter.mjs`. Run `node --test scripts/*.test.mjs` and `node scripts/check-foundation.mjs` for the foundation checks. The project scaffold command and its boundaries are documented in the shared foundation standard.
 
 These documents govern company identity, public positioning, corporate web design, information architecture, communication, product relationships, and truthfulness.
 

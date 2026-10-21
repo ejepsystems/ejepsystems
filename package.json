@@ -7,7 +7,8 @@
     "build": "pnpm --filter @jeclazon/web build",
     "lint": "pnpm --filter @jeclazon/web lint",
     "typecheck": "pnpm --filter @jeclazon/web typecheck",
-    "check:foundation": "node --test scripts/*.test.mjs && node scripts/check-foundation.mjs",
-    "create:project": "node scripts/create-project.mjs"
+    "check:foundation": "node scripts/build-starter.mjs && node --test scripts/*.test.mjs && node scripts/check-foundation.mjs",
+    "create:project": "node scripts/create-project.mjs",
+    "build:starter": "node scripts/build-starter.mjs"
   }
 }
