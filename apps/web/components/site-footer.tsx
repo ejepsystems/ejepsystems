@@ -3,7 +3,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div>
-          <p className="wordmark">Jeclazon</p>
+          <p className="wordmark">Pectrium</p>
           <p className="footer-note">
             Public-facing technology company and master technology brand.
           </p>
