@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "foundationVersion": "0.1.0",
+  "slug": "new-project",
+  "brand": { "name": "New Project", "accent": "#335CFF" },
+  "modules": { "web": true, "app": true, "admin": true, "api": false }
+}

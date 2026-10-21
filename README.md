@@ -22,7 +22,7 @@ Exact legal wording must follow the actual registered structure and applicable l
 
 ## Current repository truth
 
-At the current baseline, this repository contains foundational documentation and repository configuration. The application, package, infrastructure, and project-template trees described below are **target architecture** until their corresponding source is actually implemented.
+This repository contains the Jeclazon corporate web source in `apps/web`, shared design tokens in `packages/ui`, and a dependency-free project-manifest validator and runnable local starter generator and the internal configuration interface in `apps/starter`. Environment policy files and quality workflows are repository implementation, not evidence of deployed infrastructure. See `docs/04_INFRASTRUCTURE_READINESS.md` for the capability ledger.
 
 Documentation must never present planned capabilities as operational.
 
@@ -33,6 +33,9 @@ Read these authorities in order:
 1. `docs/00_JECLAZON_MASTER_BRAND_COMPANY_ARCHITECTURE.md`
 2. `docs/01_JECLAZON_CORPORATE_WEB_DESIGN_SYSTEM.md`
 3. `docs/02_JECLAZON_INFORMATION_ARCHITECTURE_COMMUNICATION.md`
+4. `docs/03_SHARED_FOUNDATION_STANDARD.md`
+
+Build the internal tool with `node scripts/build-starter.mjs`. Run `node --test scripts/*.test.mjs` and `node scripts/check-foundation.mjs` for the foundation checks. The project scaffold command and its boundaries are documented in the shared foundation standard.
 
 These documents govern company identity, public positioning, corporate web design, information architecture, communication, product relationships, and truthfulness.
 
@@ -72,7 +75,7 @@ ejepsystems/ejepsystems
 └── docs/
 ```
 
-The tree is a target, not a claim that those directories currently exist.
+The tree mixes existing source and target capacity. The readiness ledger identifies each implemented and pending capability.
 
 ## Jeclazon company principle
 
