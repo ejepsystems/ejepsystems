@@ -20,16 +20,16 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow">Technology company · Establishment stage</p>
             <h1 id="hero-title">
-              Building technology
-              <span>with room to evolve.</span>
+              Intelligent systems.
+              <span>Global possibilities.</span>
             </h1>
             <p className="hero-deck">
-              Jeclazon is being established as a technology company for independently
+              Pectrium is being established as a technology company for independently
               identifiable products, platforms, and future technology initiatives.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#company">
-                Understand Jeclazon <span aria-hidden="true">↘</span>
+                Understand Pectrium <span aria-hidden="true">↘</span>
               </a>
               <a className="text-link" href="#status">
                 View current state <span aria-hidden="true">→</span>
@@ -45,7 +45,7 @@ export default function Home() {
             <div>
               <h2 id="company-title">One company identity. Space for many technologies.</h2>
               <p>
-                Jeclazon is the public technology-company identity. It is designed to sit
+                Pectrium is the public technology-company identity. It is designed to sit
                 above a portfolio without forcing every product to share the company name,
                 visual identity, domain, or product experience.
               </p>
@@ -82,7 +82,7 @@ export default function Home() {
             </div>
             <div className="foundation-copy">
               <p>
-                Jeclazon can develop reusable engineering, security, design, deployment,
+                Pectrium can develop reusable engineering, security, design, deployment,
                 and developer foundations while allowing products to evolve according to
                 their own requirements.
               </p>
@@ -105,7 +105,7 @@ export default function Home() {
               <h2 id="status-title">Architecture → Engineering</h2>
             </div>
             <p>
-              Jeclazon is being established and architected. This site does not represent
+              Pectrium is being established and architected. This site does not represent
               planned products, market presence, customers, partnerships, or infrastructure
               as operational before evidence supports those claims.
             </p>
