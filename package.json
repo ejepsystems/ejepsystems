@@ -3,9 +3,9 @@
   "private": true,
   "packageManager": "pnpm@10.16.1",
   "scripts": {
-    "dev": "pnpm --filter @jeclazon/web dev",
-    "build": "pnpm --filter @jeclazon/web build",
-    "lint": "pnpm --filter @jeclazon/web lint",
-    "typecheck": "pnpm --filter @jeclazon/web typecheck"
+    "dev": "pnpm --filter @pectrium/web dev",
+    "build": "pnpm --filter @pectrium/web build",
+    "lint": "pnpm --filter @pectrium/web lint",
+    "typecheck": "pnpm --filter @pectrium/web typecheck"
   }
 }
