@@ -10,8 +10,8 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell header-inner">
-        <Link className="wordmark" href="/" aria-label="Jeclazon home">
-          Jeclazon
+        <Link className="wordmark" href="/" aria-label="Pectrium home">
+          Pectrium
         </Link>
         <nav aria-label="Primary navigation">
           <ul className="nav-list">
