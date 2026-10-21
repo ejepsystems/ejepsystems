@@ -2,17 +2,17 @@
 @import "../../../packages/ui/src/tokens.css";
 
 :root {
-  --canvas: var(--pct-/canvas);
-  --surface: var(--pct-/surface);
-  --surface-strong: var(--pct-/ink);
-  --text: var(--pct-/ink);
-  --text-muted: var(--pct-/muted);
+  --canvas: var(--pct-canvas);
+  --surface: var(--pct-surface);
+  --surface-strong: var(--pct-ink);
+  --text: var(--pct-ink);
+  --text-muted: var(--pct-muted);
   --text-on-dark: #f7f7f3;
   --line: rgba(10, 11, 13, 0.14);
   --line-strong: rgba(10, 11, 13, 0.35);
-  --accent: var(--pct-/accent);
-  --accent-soft: var(--pct-/accent-soft);
-  --max: var(--pct-/content-max);
+  --accent: var(--pct-accent);
+  --accent-soft: var(--pct-accent-soft);
+  --max: var(--pct-content-max);
 }
 
 * { box-sizing: border-box; }
