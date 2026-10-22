@@ -185,3 +185,39 @@ a:focus-visible, summary:focus-visible { outline: 2px solid currentColor; outlin
  .venture-stage { grid-column: 2; text-align: left; }
  .editorial-rows article { gap: 10px; }
 }
+
+
+/* PECTRIUM DESIGN FAMILY 01 — corporate presentation overrides */
+body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
+.wordmark { font-size: 21px; font-weight: 600; letter-spacing: -.05em; }
+.shell { width: min(calc(100% - 64px), var(--max)); }
+.home-hero { min-height: 590px; padding-block: clamp(88px, 9vw, 126px); }
+.home-hero-content { max-width: 730px; }
+.home-hero h1, .inner-hero h1 { font-size: var(--pct-type-display); line-height: var(--pct-leading-display); letter-spacing: var(--pct-tracking-display); font-weight: 480; }
+.home-hero h1 { max-width: 14ch; }
+.home-hero .eyebrow { font-size: var(--pct-type-label); margin-bottom: 20px; }
+.home-hero .hero-deck { max-width: 56ch; font-size: var(--pct-type-lead); line-height: 1.55; margin-top: 22px; }
+.home-hero .hero-actions { margin-top: 26px; }
+.button { min-height: var(--pct-touch-min); font-size: 14px; border-radius: var(--pct-radius-control); }
+.directory-intro h2,.home-bottom h2,.editorial-section h2 { font-size: var(--pct-type-section); line-height: 1.15; letter-spacing: var(--pct-tracking-section); }
+.directory-title { font-size: var(--pct-type-subheading); line-height: 1.22; }
+.directory-card { min-height: 190px; }
+.solution-disclosure { max-width: 680px; margin: 24px 0 0; color: #c2c2c2; font-size: 12px; line-height: 1.6; }
+@media(max-width:900px) {
+ .shell { width: calc(100% - 48px); }
+ .home-hero { min-height: auto; padding-block: 72px 80px; }
+}
+@media(max-width:560px) {
+ .shell { width: calc(100% - 40px); }
+ .wordmark { font-size: 19px; }
+ .home-hero { padding-block: 56px 70px; }
+ .home-hero h1,.inner-hero h1 { font-size: clamp(36px, 9.5vw, 42px); line-height: 1.08; letter-spacing: -.045em; overflow-wrap: normal; }
+ .home-hero .hero-deck { font-size: 16px; line-height: 1.55; margin-top: 20px; }
+ .home-hero .hero-actions { margin-top: 24px; gap: 10px 20px; }
+ .home-hero .button { padding: 11px 15px; }
+ .directory-card { min-height: 136px; }
+ .directory-title { font-size: 22px; }
+ .directory-intro h2,.home-bottom h2,.editorial-section h2 { font-size: clamp(27px, 7.2vw, 32px); }
+ .mobile-menu-toggle { min-width: 44px; min-height: 44px; gap: 8px; }
+ .mobile-menu-toggle span:last-child { font-size: 20px; }
+}
