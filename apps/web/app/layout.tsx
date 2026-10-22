@@ -6,12 +6,12 @@ const sans = Geist({ variable: "--font-sans", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: { default: "Pectrium — Intelligent Systems. Global Possibilities.", template: "%s — Pectrium" },
-  description: "Pectrium is being established to architect software, intelligent systems, and technology foundations.",
+  title: { default: "Pectrium — Technology for what comes next.", template: "%s — Pectrium" },
+  description: "Pectrium is a technology company focused on software, intelligent systems, and digital infrastructure.",
   robots: { index: false, follow: false },
   openGraph: {
     title: "Pectrium — Intelligent Systems. Global Possibilities.",
-    description: "Technology foundations and intelligent systems. Pectrium is at the establishment stage.",
+    description: "Software, intelligent systems, and digital infrastructure. Discover Pectrium’s technology focus and company direction.",
     type: "website",
   },
 };
