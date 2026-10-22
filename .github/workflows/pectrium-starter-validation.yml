@@ -26,6 +26,8 @@ jobs:
           node-version: "24"
       - name: Generator tests
         run: node --test tooling/create-platform.test.mjs
+      - name: Studio endpoint smoke tests
+        run: node --test tooling/studio-server.test.mjs
       - name: Generate independent project
         run: node tooling/create-platform.mjs --name "Sample Systems" --slug sample-systems --color "#243B53"
       - name: Enable Corepack
