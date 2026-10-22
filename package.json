@@ -6,6 +6,8 @@
     "dev": "pnpm --filter @pectrium/web dev",
     "build": "pnpm --filter @pectrium/web build",
     "lint": "pnpm --filter @pectrium/web lint",
-    "typecheck": "pnpm --filter @pectrium/web typecheck"
+    "typecheck": "pnpm --filter @pectrium/web typecheck",
+    "create:platform": "node tooling/create-platform.mjs",
+    "test:starter": "node --test tooling/create-platform.test.mjs"
   }
 }
