@@ -38,8 +38,14 @@ The generator defaults to `generated/<slug>` and refuses overwrites. It only cre
 6. **Release:** separate repository and project configuration, verified environment, explicit production authorization.
 7. **Design:** color customization must retain text/CTA contrast; a six-digit hex value alone is **not** a contrast guarantee.
 
+## Phase 04B — Private Template Studio v0.1
+- `tooling/studio-server.mjs` and `tooling/studio/index.html`: local-only form, brand preview and corporate project generator endpoint.
+- Start using `corepack pnpm studio` and open `http://127.0.0.1:4317` on the same computer.
+- The preview is a design illustration, not a browser-rendered generated project. No remote access, hosting, GitHub repository provisioning, payment or authentication.
+- No public deployment of this local utility is authorized. Future hosted Studio requires authentication, access controls, request protection and isolation.
+
 ## Acceptance status
 - Corporate generator implementation: present in draft PR #5, pending CI and generated-project verification.
 - Corporate template: functional source, not yet certified through a generated-project build or real-browser acceptance.
-- Advanced design templates, service/module picker, project generator UI, admin, API, app, auth, payments: not implemented.
+- Advanced design templates, service/module picker, admin, API, app, auth, payments: not implemented. The initial local-only project generator UI is implemented but not yet certified.
 - PR #5: DRAFT / HOLD MERGE. No production promotion or domain rename.
