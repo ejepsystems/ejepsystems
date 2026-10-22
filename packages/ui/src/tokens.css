@@ -24,4 +24,25 @@
   --pct-space-16: 4rem;
   --pct-space-24: 6rem;
   --pct-space-32: 8rem;
+
+  /* Pectrium Design Family 01 */
+  --pct-font-body: var(--font-sans), Arial, sans-serif;
+  --pct-font-technical: var(--font-mono), monospace;
+  --pct-type-display: clamp(36px, 4.3vw, 66px);
+  --pct-type-section: clamp(27px, 3.3vw, 44px);
+  --pct-type-subheading: clamp(19px, 2vw, 26px);
+  --pct-type-lead: clamp(16px, 1.45vw, 18px);
+  --pct-type-body: clamp(15px, 1.2vw, 16px);
+  --pct-type-label: 11px;
+  --pct-leading-display: 1.08;
+  --pct-leading-body: 1.65;
+  --pct-tracking-display: -0.045em;
+  --pct-tracking-section: -0.035em;
+  --pct-radius-card: 8px;
+  --pct-header-mobile: 60px;
+  --pct-header-desktop: 68px;
+  --pct-touch-min: 44px;
+  --pct-gutter-mobile: 20px;
+  --pct-gutter-tablet: 24px;
+  --pct-gutter-desktop: 32px;
 }
