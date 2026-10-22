@@ -1,0 +1,3 @@
+import type {Metadata} from "next";import {PageFrame,PageHero} from "@/components/page-frame";
+export const metadata:Metadata={title:"Insights",description:"Pectrium perspectives and publications, when approved for release."};
+export default function Insights(){return <PageFrame><PageHero eyebrow="04 / Insights" title="Ideas worth examining." description="A future home for considered writing on technology, engineering and the systems shaping what comes next."/><section className="shell editorial-section"><p className="section-index">Publications</p><div className="empty-editorial"><h2>Nothing published yet.</h2><p>We will share writing here when it has been reviewed and approved. No placeholder articles or fabricated announcements.</p></div></section></PageFrame>;}
