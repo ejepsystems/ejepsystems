@@ -343,3 +343,20 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .feature-cta { margin-top:28px; }
 }
 @media(prefers-reduced-motion:reduce) { .feature-cta:hover { transform:none; } }
+
+
+/* Editorial Atmosphere 04 — original, CSS-rendered Mercuryo-inspired depth */
+.feature-art { isolation:isolate; background:
+ radial-gradient(ellipse 75% 85% at 20% 25%,rgba(13,90,89,.52),transparent 72%),
+ radial-gradient(ellipse 70% 60% at 70% 95%,rgba(21,83,78,.45),transparent 75%),
+ linear-gradient(145deg,#061113 0%,#092327 48%,#071113 100%); }
+.feature-art::before { content:""; position:absolute; z-index:0; width:104%; height:160%; left:52%; top:-32%; border-radius:50% 0 0 50%; transform:rotate(-19deg); background:
+ repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 27px),
+ linear-gradient(100deg,#aeb5ac 0%,#e0ddd2 37%,#bbbdb4 72%,#8e9790 100%); box-shadow:-18px 0 0 rgba(0,0,0,.28),-24px 0 65px rgba(0,0,0,.4); }
+.feature-art::after { content:""; position:absolute; z-index:1; inset:0; background:radial-gradient(ellipse at 30% 50%,transparent 24%,rgba(1,8,10,.12) 82%),linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.35)); pointer-events:none; }
+.feature-art-grid { z-index:1; opacity:.18; mix-blend-mode:overlay; }
+.feature-art-grid span { background:transparent!important; border-left:1px solid rgba(255,255,255,.35); border-right:0; }
+.feature-art-caption { z-index:2; letter-spacing:.15em; text-shadow:0 1px 12px #000; }
+.feature-copy { background:radial-gradient(ellipse at 100% 0%,#172426 0%,#0b0b0c 75%); }
+@media(max-width:900px) { .feature-art::before { left:52%; width:100%; } }
+@media(max-width:560px) { .feature-art::before { left:49%; width:116%; } }
