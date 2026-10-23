@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Pectrium is a technology company focused on software, intelligent systems, and digital infrastructure.",
   robots: { index: false, follow: false },
   openGraph: {
-    title: "Pectrium — Intelligent Systems. Global Possibilities.",
+    title: "Pectrium — Technology for what comes next.",
     description: "Software, intelligent systems, and digital infrastructure. Discover Pectrium’s technology focus and company direction.",
     type: "website",
   },
