@@ -295,3 +295,51 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .initiative-preview-row > span:last-child { grid-column:2; text-align:left; }
  .initiative-preview-row strong,.initiative-preview-row h2 { font-size:20px; }
 }
+
+
+/* Pectrium editorial mobile study — Mercuryo composition principles, original execution */
+.site-header { background: #0b0b0c; color: #fff; border-bottom-color: #29292b; backdrop-filter: none; }
+.site-header .wordmark span { color: #fff; }
+.site-header .nav-list a { color: #fff; }
+.site-header .nav-list a[aria-current="page"] { text-underline-offset: 7px; }
+.site-header .header-link { background: #f7f7f5; color: #0b0b0c; border-radius: 999px; min-height: 42px; padding: 0 20px; font-weight: 500; }
+.mobile-header-cta { display: none; }
+.editorial-feature { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,1fr); margin-top: 0; margin-bottom: clamp(72px,9vw,120px); background: #0b0b0c; color: #fff; overflow: hidden; border-radius: 10px; }
+.feature-art { position: relative; min-height: 480px; overflow: hidden; background: #232b2b; }
+.feature-art-grid { position:absolute; inset:0; display:grid; grid-template-columns:repeat(4,1fr); transform: rotate(-17deg) scale(1.35); }
+.feature-art-grid span { border-left:1px solid rgba(255,255,255,.28); border-right:1px solid rgba(0,0,0,.18); background: #202b2a; }
+.feature-art-grid span:nth-child(2) { background:#55625d; }
+.feature-art-grid span:nth-child(3) { background:#a6aca4; }
+.feature-art-grid span:nth-child(4) { background:#323b37; }
+.feature-art-caption { position:absolute; bottom:22px; left:24px; color:#fff; font:10px var(--font-mono),monospace; letter-spacing:.1em; }
+.feature-copy { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:clamp(28px,5vw,72px); }
+.feature-kicker { font:11px var(--font-mono),monospace; text-transform:uppercase; letter-spacing:.08em; color:#c0c0c0; margin:0 0 28px; }
+.feature-copy h2 { max-width:14ch; margin:0; font-size:clamp(30px,3.4vw,52px); line-height:1.13; font-weight:500; letter-spacing:-.045em; }
+.feature-copy > p:not(.feature-kicker) { max-width:40ch; margin:22px 0 0; font-size:15px; line-height:1.6; color:#c5c5c5; }
+.feature-cta { margin-top:36px; display:inline-flex; align-items:center; justify-content:space-between; gap:32px; min-height:50px; padding:8px 10px 8px 22px; border-radius:999px; background:#f7f7f5; color:#0b0b0c; font-size:14px; font-weight:550; transition:background .18s ease,transform .18s ease; }
+.feature-cta:hover { background:#e8e8e5; transform:translateY(-1px); }
+.feature-cta-arrow { display:grid; place-items:center; width:32px; height:32px; border-radius:50%; background:#0b0b0c; color:#fff; }
+.feature-cta:focus-visible { outline:2px solid #fff; outline-offset:4px; }
+@media(max-width:900px) {
+ .header-inner { grid-template-columns:minmax(0,1fr) auto auto; gap:12px; }
+ .mobile-header-cta { display:inline-flex; align-items:center; gap:8px; justify-content:center; min-height:44px; padding:0 17px; background:#f7f7f5; color:#0b0b0c; border-radius:999px; font-size:13px; font-weight:550; white-space:nowrap; }
+ .mobile-menu-toggle { color:#fff; min-width:44px; justify-content:center; }
+ .mobile-site-nav.is-open { background:#0b0b0c; color:#fff; border-top-color:#333; }
+ .mobile-site-nav a { border-bottom-color:#333; }
+ .mobile-site-nav .mobile-nav-number { color:#a7a7a7; }
+ .editorial-feature { grid-template-columns:1fr; }
+ .feature-art { min-height:clamp(280px,55vw,430px); }
+ .feature-copy { padding:36px 28px 40px; }
+}
+@media(max-width:560px) {
+ .header-inner { gap:8px; }
+ .mobile-header-cta { padding:0 15px; }
+ .mobile-menu-toggle { min-width:44px; gap:0; }
+ .mobile-menu-toggle .menu-label { display:none; }
+ .editorial-feature { width:calc(100% - 20px); border-radius:8px; margin-bottom:76px; }
+ .feature-art { min-height: min(70vw,330px); }
+ .feature-copy { padding:34px 24px 38px; }
+ .feature-copy h2 { font-size:clamp(29px,8vw,37px); }
+ .feature-cta { margin-top:28px; }
+}
+@media(prefers-reduced-motion:reduce) { .feature-cta:hover { transform:none; } }
