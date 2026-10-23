@@ -25,10 +25,10 @@
   --pct-space-24: 6rem;
   --pct-space-32: 8rem;
 
-  /* Pectrium Design Family 01 */
+  /* Pectrium Design Family 02 — approved precision monochrome */
   --pct-font-body: var(--font-sans), Arial, sans-serif;
   --pct-font-technical: var(--font-mono), monospace;
-  --pct-type-display: clamp(36px, 4.3vw, 66px);
+  --pct-type-display: clamp(36px, 4.7vw, 68px);
   --pct-type-section: clamp(27px, 3.3vw, 44px);
   --pct-type-subheading: clamp(19px, 2vw, 26px);
   --pct-type-lead: clamp(16px, 1.45vw, 18px);
