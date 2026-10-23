@@ -269,3 +269,29 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .menu-label { font-size: 13px; }
  .menu-glyph { font-size: 20px; }
 }
+
+
+/* CORPORATE POSITIONING & EXPERIENCE 03 — preserves Design Family 02 */
+.process-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:36px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.process-strip span { display:flex; align-items:center; min-height:74px; padding:14px 18px; font-size:13px; font-weight:500; line-height:1.45; }
+.process-strip span+span { border-left:1px solid var(--line); }
+.initiative-preview { margin:30px 0 22px; border-top:1px solid var(--line); }
+.initiative-preview-row { display:grid; grid-template-columns:36px minmax(0,1fr) auto; align-items:center; gap:16px; min-height:86px; padding:18px 0; border-bottom:1px solid var(--line); }
+.initiative-preview-row > span:first-child { font:11px var(--font-mono),monospace; color:var(--text-muted); }
+.initiative-preview-row strong,.initiative-preview-row h2 { margin:0; font-size:clamp(19px,2vw,26px); font-weight:550; letter-spacing:-.03em; }
+.initiative-preview-row > span:last-child { font-size:12px; color:var(--text-muted); text-align:right; }
+.initiative-page-list .initiative-preview-row { min-height:108px; }
+.solution-row .solution-example { font-size:13px; line-height:1.55; margin-top:12px; }
+.home-hero-aside { pointer-events:none; }
+@media(max-width:900px) {
+ .process-strip { margin-top:26px; }
+ .process-strip span { padding:12px; font-size:12px; }
+}
+@media(max-width:560px) {
+ .process-strip { grid-template-columns:1fr; }
+ .process-strip span { min-height:50px; padding:12px 0; }
+ .process-strip span+span { border-left:0; border-top:1px solid var(--line); }
+ .initiative-preview-row { grid-template-columns:28px minmax(0,1fr); gap:8px 12px; min-height:86px; }
+ .initiative-preview-row > span:last-child { grid-column:2; text-align:left; }
+ .initiative-preview-row strong,.initiative-preview-row h2 { font-size:20px; }
+}
