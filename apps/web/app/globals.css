@@ -221,3 +221,51 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .mobile-menu-toggle { min-width: 44px; min-height: 44px; gap: 8px; }
  .mobile-menu-toggle span:last-child { font-size: 20px; }
 }
+
+
+/* PECTRIUM DESIGN FAMILY 02 — approved precision monochrome */
+:root {
+ --pct-type-display: clamp(36px, 4.7vw, 68px);
+ --pct-type-section: clamp(27px, 3.3vw, 44px);
+ --pct-type-subheading: clamp(19px, 2vw, 26px);
+}
+.wordmark { font-size: 22px; font-weight: 600; letter-spacing: -.05em; }
+.header-inner { min-height: 68px; }
+.nav-list { gap: clamp(14px, 1.9vw, 28px); }
+.nav-list a { white-space: nowrap; font-weight: 500; }
+.home-hero { min-height: auto; padding-block: clamp(96px, 9vw, 128px); }
+.home-hero h1 { max-width: 15ch; font-weight: 500; }
+.inner-hero h1 { font-weight: 500; max-width: 20ch; font-size: clamp(34px, 4.2vw, 60px); }
+.home-hero .hero-deck { max-width: 56ch; }
+.directory-intro h2,.home-bottom h2,.editorial-section h2 { font-weight: 500; }
+.directory-title { font-weight: 550; }
+.directory-card { min-height: 172px; }
+.directory-card:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+.solution-rows { border-top: 1px solid var(--line); }
+.solution-row { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.solution-number { font: 11px var(--font-mono),monospace; color: var(--text-muted); }
+.solution-row h2 { margin: 0; font-size: var(--pct-type-subheading); font-weight: 550; letter-spacing: -.025em; line-height: 1.22; }
+.solution-row p { max-width: 62ch; color: var(--text-muted); font-size: 15px; line-height: 1.65; margin: 12px 0 0; }
+.solution-row .solution-direction { color: var(--text); font-weight: 500; }
+.mobile-menu-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+@media(max-width:900px) {
+ .header-inner { min-height: 60px; }
+ .mobile-menu-toggle { min-width: 44px; min-height: 44px; }
+ .mobile-site-nav a { font-size: 20px; min-height: 56px; }
+ .inner-hero { padding-block: 68px 74px; }
+}
+@media(max-width:560px) {
+ .wordmark { font-size: 20px; }
+ .home-hero { padding-block: 60px 68px; }
+ .home-hero h1 { font-size: clamp(36px, 9.1vw, 40px); max-width: 15ch; }
+ .inner-hero h1 { font-size: clamp(34px, 8.7vw, 38px); line-height: 1.1; overflow-wrap: normal; }
+ .home-hero .hero-deck { font-size: 16px; }
+ .home-hero .eyebrow { font-size: 10px; }
+ .directory-title { font-size: 20px; }
+ .directory-card { min-height: 134px; }
+ .directory-intro h2,.home-bottom h2,.editorial-section h2 { font-size: clamp(27px, 7.2vw, 30px); }
+ .solution-row { grid-template-columns: 30px 1fr; padding: 24px 0; gap: 12px; }
+ .solution-row h2 { font-size: 20px; }
+ .menu-label { font-size: 13px; }
+ .menu-glyph { font-size: 20px; }
+}
