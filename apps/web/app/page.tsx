@@ -1,118 +1,31 @@
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { SystemVisual } from "@/components/system-visual";
+import Link from "next/link";
+import { PageFrame } from "@/components/page-frame";
+import { HeroMedia } from "@/components/hero-media";
 
-const disciplines = [
-  "Software systems",
-  "Artificial intelligence",
-  "Cloud infrastructure",
-  "Developer technology",
-  "Data systems",
-  "Digital infrastructure",
+const directions=[
+ {number:"01",title:"Everyday work",description:"Make requests, services and daily tasks simpler to manage.",href:"/solutions/work-and-services"},
+ {number:"02",title:"Learning and knowledge",description:"Help people find guidance and understand information more easily.",href:"/solutions/learning-and-intelligence"},
+ {number:"03",title:"People and places",description:"Connect people with useful services, opportunities and updates.",href:"/solutions/connected-communities"},
+ {number:"04",title:"Clearer decisions",description:"Make scattered information easier to understand and act on.",href:"/solutions/learning-and-intelligence"}
 ];
 
-export default function Home() {
-  return (
-    <>
-      <SiteHeader />
-      <main>
-        <section className="hero shell" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <p className="eyebrow">Technology company · Establishment stage</p>
-            <h1 id="hero-title">
-              Building technology
-              <span>with room to evolve.</span>
-            </h1>
-            <p className="hero-deck">
-              Jeclazon is being established as a technology company for independently
-              identifiable products, platforms, and future technology initiatives.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#company">
-                Understand Jeclazon <span aria-hidden="true">↘</span>
-              </a>
-              <a className="text-link" href="#status">
-                View current state <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-          <SystemVisual />
-        </section>
-
-        <section className="statement" id="company" aria-labelledby="company-title">
-          <div className="shell statement-grid">
-            <p className="section-index">01 / Company</p>
-            <div>
-              <h2 id="company-title">One company identity. Space for many technologies.</h2>
-              <p>
-                Jeclazon is the public technology-company identity. It is designed to sit
-                above a portfolio without forcing every product to share the company name,
-                visual identity, domain, or product experience.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="technology shell" id="technology" aria-labelledby="technology-title">
-          <div className="section-heading">
-            <p className="section-index">02 / Technology</p>
-            <h2 id="technology-title">Broad by architecture. Precise in what we claim.</h2>
-            <p>
-              The company architecture can support multiple technology disciplines over
-              time. These areas describe design capacity, not a claim that products are
-              currently operating in each category.
-            </p>
-          </div>
-          <ol className="discipline-list">
-            {disciplines.map((discipline, index) => (
-              <li key={discipline}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{discipline}</strong>
-                <span aria-hidden="true">↗</span>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="foundation" id="foundation" aria-labelledby="foundation-title">
-          <div className="shell foundation-grid">
-            <div>
-              <p className="section-index">03 / Foundation</p>
-              <h2 id="foundation-title">Shared where useful. Independent where necessary.</h2>
-            </div>
-            <div className="foundation-copy">
-              <p>
-                Jeclazon can develop reusable engineering, security, design, deployment,
-                and developer foundations while allowing products to evolve according to
-                their own requirements.
-              </p>
-              <div className="principle">
-                <span>Company layer</span>
-                <strong>Standards · Foundations · Governance</strong>
-              </div>
-              <div className="principle">
-                <span>Product layer</span>
-                <strong>Identity · Experience · Domain logic</strong>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="status shell" id="status" aria-labelledby="status-title">
-          <div className="status-panel">
-            <div>
-              <p className="eyebrow">Current state</p>
-              <h2 id="status-title">Architecture → Engineering</h2>
-            </div>
-            <p>
-              Jeclazon is being established and architected. This site does not represent
-              planned products, market presence, customers, partnerships, or infrastructure
-              as operational before evidence supports those claims.
-            </p>
-          </div>
-        </section>
-      </main>
-      <SiteFooter />
-    </>
-  );
-}
+export default function Home(){return <PageFrame>
+ <section className="pectrium-cinematic-hero" aria-labelledby="home-heading">
+ <HeroMedia/>
+ <div className="pectrium-cinematic-shade" aria-hidden="true"/>
+ <div className="shell pectrium-cinematic-inner">
+  <div className="pectrium-cinematic-content">
+   <p className="eyebrow">Software · Intelligence · Infrastructure</p>
+   <h1 id="home-heading">Technology built<br/>around real needs.</h1>
+   <p className="pectrium-cinematic-deck">Software and intelligent systems that make everyday work simpler and more connected.</p>
+   <Link className="pectrium-cinematic-cta" href="/products">Discover our products <span aria-hidden="true">↗</span></Link>
+  </div>
+ </div>
+ </section>
+ <section className="home-directory" id="solutions"><div className="shell"><div className="directory-intro"><p className="section-index">Solutions / Focus</p><h2>Start with the problem, not the technology.</h2></div>
+ <div className="directory-grid">{directions.map(s=><Link className="directory-card" href={s.href} key={s.number}><span className="directory-title">{s.title}<span aria-hidden="true">↗</span></span><span className="directory-description">{s.description}</span></Link>)}</div>
+</div></section>
+ <section className="shell editorial-section"><p className="section-index">Technology / Approach</p><div><h2>Different challenges need different tools.</h2><p>Software engineering, AI, cloud systems and data practices provide different ways to approach a problem. Our technology focus is guided by usefulness, responsible design and maintainability.</p><Link className="text-link" href="/technology">Explore the technology <span aria-hidden="true">↗</span></Link>
+ <div className="process-strip" aria-label="Technology development approach"><span>Understand the need</span><span>Explore the approach</span><span>Validate the result</span></div></div></section>
+ <section className="shell home-bottom"><p className="section-index">The company</p><div><h2>Purpose before complexity.</h2><p>Learn about Pectrium’s direction, principles and approach to developing useful technology.</p><Link className="text-link" href="/company">Discover Pectrium <span aria-hidden="true">↗</span></Link></div></section>
+ </PageFrame>;}

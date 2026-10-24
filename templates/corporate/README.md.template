@@ -1,0 +1,28 @@
+# __PROJECT_NAME__
+
+Generated from the Pectrium corporate starter.
+
+- Brand accent: `__BRAND_COLOR__`
+- Template: corporate
+- Framework: Next.js 16 / React 19 / Geist
+- Routes: Home, Company, Services, Contact
+- Launch status: **NOT READY** until brand copy, services, contact details, security and accessibility are reviewed.
+
+## Start
+```sh
+corepack pnpm install
+corepack pnpm dev
+corepack pnpm lint
+corepack pnpm typecheck
+corepack pnpm build
+```
+
+## Before deployment
+1. Replace placeholder company and services copy with verified content.
+2. Add verified contact channels or a secured contact backend.
+3. Set appropriate SEO metadata and review `noindex` for public launch.
+4. Validate at 320, 375, 390, 768, 1024 and 1440 px; check keyboard and contrast.
+5. Configure hosting secrets and domains in the new project's isolated environment.
+6. Run CI and review a protected preview before any production promotion.
+
+This template deliberately does not include authentication, payments, admin or API modules. Those require separately reviewed starter modules.

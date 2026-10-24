@@ -1,184 +1,34 @@
-# EJEP Systems — Jeclazon Technology Foundation
+# Pectrium — EJEP Systems Technology Foundation
 
-This repository is the underlying EJEP Systems technology foundation for **Jeclazon**, the public-facing parent technology company and master technology brand.
+**Pectrium** is the approved public-facing master technology brand founded by Evans Jep. **EJEP Systems** retains its underlying legal/corporate role, with legal wording subject to verified records. **Jeclazon is retired** and must not be presented as the active company or master brand.
 
-## Identity authority
+**Brand statement:** Intelligent Systems. Global Possibilities.
 
-```text
-EJEP SYSTEMS
-└── Legal / Corporate Entity
-    └── JECLAZON
-        ├── Public Technology Company
-        ├── Master Technology Brand
-        ├── Shared Technology Foundations
-        └── Independent Products / Platforms / Services
-```
+## Governing authority
 
-**EJEP Systems** is the underlying legal/corporate entity and should appear publicly where legal, financial, contractual, regulatory, operational, or other formal disclosure requires it.
+1. [Pectrium Master Brand Directive](docs/00_PECTRIUM_MASTER_BRAND_DIRECTIVE.md) — current brand authority
+2. [Phase 02 audit and controlled migration plan](docs/PECTRIUM_PHASE_02_MIGRATION_PLAN.md) — inventory, risk, verification and release gates
 
-**Jeclazon** is the public technology-company identity.
+The previous Jeclazon authority documents in `docs/` are preserved as historical, superseded records. They are not current identity authority. Their engineering, accessibility and truthfulness principles may be reused where consistent with the Pectrium directive.
 
-Exact legal wording must follow the actual registered structure and applicable law. This repository must not invent legal relationships.
+## Repository status
 
-## Current repository truth
+This repository includes a pnpm workspace and an existing Next.js corporate web application. The reviewed web source, workspace package names, root scripts, and shared design tokens have been staged under Pectrium on this feature branch. Historical Jeclazon documentation remains unchanged. Complete recursive inventory, build verification, and deployment review remain outstanding.
 
-At the current baseline, this repository contains foundational documentation and repository configuration. The application, package, infrastructure, and project-template trees described below are **target architecture** until their corresponding source is actually implemented.
+The proposed wider architecture (shared UI, configuration, project starters, restricted admin, optional APIs and infrastructure) must be verified against actual source before being described as implemented.
 
-Documentation must never present planned capabilities as operational.
+## Existing project identities
 
-## Read before implementation
+Quincestone, Emperor Armani, and Clesla retain their identities. No legal ownership or operational status is asserted merely by listing them in planning documents. Additional projects should not be publicly presented as EJEP/Pectrium builds before their work begins and relationships are verified.
 
-Read these authorities in order:
+## Engineering and publication rules
 
-1. `docs/00_JECLAZON_MASTER_BRAND_COMPANY_ARCHITECTURE.md`
-2. `docs/01_JECLAZON_CORPORATE_WEB_DESIGN_SYSTEM.md`
-3. `docs/02_JECLAZON_INFORMATION_ARCHITECTURE_COMMUNICATION.md`
+- Preserve project independence, secrets isolation, least privilege, verified release provenance and separate preview/production boundaries.
+- Publish only substantiated capabilities and accurate lifecycle status.
+- Do not introduce customer accounts, sign-in, checkout, or billing into the corporate website.
+- No production deployment, domain migration, repository rename, legal identity change, or merge without explicit approval.
+- Follow: AUDIT → BASELINE → PLAN → IMPLEMENT → VERIFY → REVIEW → APPROVE.
 
-These documents govern company identity, public positioning, corporate web design, information architecture, communication, product relationships, and truthfulness.
+## Migration status
 
-## Target platform architecture
-
-```text
-ejepsystems/ejepsystems
-│
-├── apps/
-│   ├── web/                  # Jeclazon public technology-company website
-│   └── admin/                # Restricted internal platform control surface
-│
-├── packages/
-│   ├── ui/                   # Shared foundations; not forced product sameness
-│   ├── config/
-│   ├── platform/
-│   ├── agent-runtime/
-│   └── project-foundation/
-│
-├── infrastructure/
-│   ├── openshell/            # Centrally owned execution foundation
-│   ├── policies/
-│   ├── environments/
-│   └── deployment/
-│
-├── templates/
-│   └── project/
-│       ├── apps/
-│       │   ├── web/
-│       │   ├── app/
-│       │   ├── admin/
-│       │   └── api/          # Optional
-│       ├── packages/
-│       ├── infrastructure/
-│       └── docs/
-│
-└── docs/
-```
-
-The tree is a target, not a claim that those directories currently exist.
-
-## Jeclazon company principle
-
-Jeclazon must remain larger than any one product.
-
-A product may have its own name, brand, domain, application, infrastructure, audience, business model, documentation, and developer ecosystem while remaining part of Jeclazon.
-
-Do not automatically name products `Jeclazon [Product]`.
-
-## Corporate website principle
-
-The future `apps/web` surface is Jeclazon's public digital headquarters. It must be company-first and capable of growing with the portfolio without being rebuilt around each new product.
-
-Potential routes such as Company, Technology, Products, Research, Developers, Business, Careers, Newsroom, Support, and Legal are architectural capacity only. Publish a route only when real content or operations justify it.
-
-The public experience must not invent scale through empty pages, fake statistics, fictional customers, logo walls, testimonials, offices, partnerships, products, research achievements, infrastructure, or market presence.
-
-## Design reference model
-
-Jeclazon's design system is original. External references provide principles only:
-
-- **Apple** — visual discipline, hierarchy, spacing, progressive disclosure
-- **Stripe** — technology communication and information clarity
-- **NVIDIA** — company/platform/product hierarchy
-- **Vercel** — interaction quality and technical expression
-- **Cloudflare** — scalable product discovery and developer/business organization
-
-Do not clone their visual identity, copy, assets, proprietary components, or distinctive layouts.
-
-The target Jeclazon character is precise, restrained, technically credible, accessible, responsive, evidence-led, and recognizably its own.
-
-## Reusable project foundation
-
-The target project foundation provides:
-
-- **web** — public/product experience
-- **app** — primary interactive/authenticated application when required
-- **admin** — restricted product administration
-- **api** — optional dedicated API
-
-A new project should inherit useful engineering foundations, then apply its own product identity, content, domain logic, integrations, infrastructure, and capabilities.
-
-Shared infrastructure must accelerate products without unnecessarily coupling them.
-
-## Truthfulness lifecycle
-
-Use accurate state labels where needed:
-
-- Concept
-- Research
-- Architecture
-- Engineering
-- Validation
-- Pilot
-- Public Launch
-- Operational
-- Authoritative Documentation
-
-Architecture is not operation. Planned technology must never be represented as already deployed or publicly available.
-
-## Security and engineering
-
-As implementation begins:
-
-- isolate products/projects
-- use least privilege
-- keep secrets out of source control
-- separate development, preview, and production
-- preserve database/RLS boundaries where applicable
-- version infrastructure changes
-- use migrations for database changes
-- keep shared behavior shared only when it is genuinely shared
-- keep product-specific logic with the product
-- tie production deployments to verified Git revisions
-- require explicit authorization for high-impact production integrations
-
-## Change discipline
-
-Use the sequence:
-
-```text
-AUDIT
-  ↓
-ESTABLISH BASELINE
-  ↓
-PLAN
-  ↓
-IMPLEMENT
-  ↓
-VERIFY
-  ↓
-REPORT
-  ↓
-STOP
-```
-
-Do not build speculative source merely to make the target repository tree appear complete.
-
-## Build principle
-
-**EJEP Systems provides the underlying legal/corporate and technology foundation.**
-
-**Jeclazon is the public technology company.**
-
-**Products remain independently identifiable.**
-
-**Share foundations where beneficial. Preserve independence where necessary.**
-
-**Build only what is real, and describe it according to its actual state.**
+Phase 02 source migration is staged on a feature branch, not merged or publicly deployed. Runtime build/lint/typecheck verification remains pending. See the migration plan for confirmed references, audit limitations and remaining work.

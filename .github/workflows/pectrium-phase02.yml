@@ -1,0 +1,39 @@
+name: Pectrium Phase 02 validation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.16.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inventory legacy brand references
+        run: |
+          echo 'Active source references (must be empty):'
+          if git grep -n -i -E 'jeclazon|--jz-|--pct-/' -- apps packages package.json; then
+            echo 'Active source still contains legacy brand references'
+            exit 1
+          fi
+      - name: Validate shared token definitions
+        run: |
+          node -e 'const fs=require("fs"); const t=fs.readFileSync("packages/ui/src/tokens.css","utf8"); const c=fs.readFileSync("apps/web/app/globals.css","utf8"); const names=new Set([...t.matchAll(/(--pct-[a-z0-9-]+)\s*:/g)].map(m=>m[1])); const refs=[...c.matchAll(/var\((--pct-[a-z0-9-]+)\)/g)].map(m=>m[1]); const missing=refs.filter(n=>!names.has(n)); if(missing.length||t.includes("--pct-/")||c.includes("--pct-/")){ console.error("Invalid or undefined tokens",missing);process.exit(1)} console.log("Validated",names.size,"definitions and",refs.length,"references")'
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Build
+        run: pnpm build

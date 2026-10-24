@@ -1,0 +1,3 @@
+import type {Metadata} from "next";import Link from "next/link";
+export const metadata:Metadata={title:"Services"};
+export default function Services(){return <main id="main" className="container inner"><Link href="/">← __PROJECT_NAME__</Link><p className="eyebrow">Services</p><h1>What we do.</h1><p className="lead">Add only actual services and supported capabilities. No fictional customers, metrics or testimonials.</p><Link className="cta" href="/contact">Contact ↗</Link></main>;}
