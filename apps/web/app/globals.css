@@ -410,3 +410,22 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .pectrium-cinematic-content h1 { font-size:34px; }
 }
 @media(prefers-reduced-motion:reduce) { .pectrium-cinematic-hero * { scroll-behavior:auto; } }
+
+
+/* Product family — compact, editorial, design family 02 */
+.product-family { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding-block:12px 96px; }
+.product-family-card { min-width:0; min-height:330px; background:#121314; color:#fff; border:1px solid #333536; border-radius:8px; padding:clamp(22px,3vw,42px); display:flex; flex-direction:column; }
+.product-family-card:first-child { grid-column:1/-1; min-height:370px; background:#20272b; }
+.product-family-meta { display:flex; justify-content:space-between; align-items:start; gap:14px; }
+.product-family-meta .section-index { color:#b9babb; font-size:11px; }
+.product-status { border:1px solid #606366; border-radius:99px; padding:5px 10px; color:#d4d4d4; font:11px var(--font-mono),monospace; white-space:nowrap; }
+.product-family-card h2 { font-size:clamp(34px,4.5vw,64px); letter-spacing:-.055em; font-weight:550; line-height:1.07; margin:48px 0 18px; }
+.product-family-card h2 span { color:#aab4b8; }
+.product-family-card p { max-width:47ch; font-size:16px; line-height:1.55; color:#d2d6d7; margin:0 0 32px; }
+.product-capabilities { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; }
+.product-capabilities span { font-size:12px; color:#e1e4e4; border:1px solid #525759; border-radius:999px; padding:8px 11px; }
+.product-family-outro { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding-bottom:100px; }
+.product-family-outro h2 { font-size:clamp(30px,3.5vw,48px); letter-spacing:-.04em; }
+.product-family-outro p { color:var(--text-muted); line-height:1.7; }
+@media(max-width:900px){.product-family { grid-template-columns:1fr; padding-bottom:64px; }.product-family-card:first-child { grid-column:auto; }.product-family-card,.product-family-card:first-child { min-height:300px; }.product-family-outro { grid-template-columns:1fr; }}
+@media(max-width:560px){.product-family { gap:9px; }.product-family-card,.product-family-card:first-child { min-height:260px; padding:23px 20px; }.product-family-card h2 { font-size:clamp(34px,9vw,44px); margin:34px 0 14px; }.product-family-card p { font-size:14px; margin-bottom:24px; }.product-family-meta .section-index { font-size:9px; }.product-status { font-size:9px; padding:5px 8px; }.product-capabilities span { font-size:11px; }.product-family-outro { padding-bottom:65px; }}
