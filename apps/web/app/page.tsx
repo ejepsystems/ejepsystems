@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageFrame } from "@/components/page-frame";
+import { HeroMedia } from "@/components/hero-media";
 
 const directions=[
  {number:"01",title:"Everyday work",description:"Make requests, services and daily tasks simpler to manage.",href:"/solutions/work-and-services"},
@@ -10,7 +11,7 @@ const directions=[
 
 export default function Home(){return <PageFrame>
  <section className="pectrium-cinematic-hero" aria-labelledby="home-heading">
- <div className="pectrium-cinematic-image" role="img" aria-label="Original illustration of people moving through a connected public plaza and modern workplaces"/>
+ <HeroMedia/>
  <div className="pectrium-cinematic-shade" aria-hidden="true"/>
  <div className="shell pectrium-cinematic-inner">
   <div className="pectrium-cinematic-content">
