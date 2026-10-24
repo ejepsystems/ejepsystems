@@ -2,16 +2,16 @@ import Link from "next/link";
 import { FlowMark } from "./flow-mark";
 
 const columns=[
- {title:"Products",links:[["Flow","/products#flow"],["Assist","/products#assist"],["Connect","/products#connect"],["Insight","/products#insight"],["Studio","/products#studio"],["All products","/products"]]},
- {title:"Solutions",links:[["Digital workflows","/solutions#workflows"],["Information clarity","/solutions#information"],["Connected operations","/solutions#connected"],["Data intelligence","/solutions#data"],["All solutions","/solutions"]]},
+ {title:"Products",links:[["Flow","/products/flow"],["Assist","/products/assist"],["Connect","/products/connect"],["Insight","/products/insight"],["Studio","/products/studio"],["All products","/products"]]},
+ {title:"Solutions",links:[["Work and services","/solutions/work-and-services"],["Learning and intelligence","/solutions/learning-and-intelligence"],["Connected communities","/solutions/connected-communities"],["All solutions","/solutions"]]},
  {title:"Explore",links:[["Technology","/technology"],["Initiatives","/ventures"],["Insights","/insights"]]},
- {title:"Pectrium",links:[["Company","/company"],["Contact","/contact"]]}
+ {title:"Company",links:[["About Pectrium","/company"],["Contact","/contact"]]}
 ] as const;
 
 export function SiteFooter(){return <footer className="site-footer pectrium-footer">
  <div className="shell pectrium-footer-intro">
   <div><p className="pectrium-footer-eyebrow">Pectrium / Technology company</p><h2>Technology built<br/>around real needs.</h2></div>
-  <Link className="pectrium-footer-cta" href="/products#flow">Meet Pectrium Flow <span aria-hidden="true">↗</span></Link>
+  <Link className="pectrium-footer-cta" href="/products/flow">Meet Pectrium Flow <span aria-hidden="true">↗</span></Link>
  </div>
  <div className="shell pectrium-footer-main">
   <div className="pectrium-footer-brand">
