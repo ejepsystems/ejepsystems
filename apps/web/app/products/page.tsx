@@ -17,8 +17,8 @@ const products = [
 export default function Products(){return <PageFrame>
  <PageHero eyebrow="Pectrium / Products" title="One direction. Connected possibilities." description="Meet the product family taking shape around simpler workflows, useful intelligence and dependable digital experiences."/>
  <section className="shell product-family" aria-label="Pectrium product family">
-  {products.map((product,i)=><article className="product-family-card" key={product.name}>
-   <div className="product-family-meta"><span className="section-index">0{i+1} / {product.category}</span><span className="product-status">{product.status}</span></div>
+  {products.map((product)=><article className="product-family-card" id={product.name.toLowerCase()} key={product.name}>
+   <div className="product-family-meta"><span className="section-index">{product.category}</span><span className="product-status">{product.status}</span></div>
    <h2>Pectrium <span>{product.name}</span></h2>
    <p>{product.description}</p>
    <div className="product-capabilities">{product.capabilities.map(item=><span key={item}>{item}</span>)}</div>
