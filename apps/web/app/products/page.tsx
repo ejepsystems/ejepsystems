@@ -22,6 +22,7 @@ export default function Products(){return <PageFrame>
    <h2>Pectrium <span>{product.name}</span></h2>
    <p>{product.description}</p>
    <div className="product-capabilities">{product.capabilities.map(item=><span key={item}>{item}</span>)}</div>
+   <Link className="text-link pectrium-card-link" href={`/products/${product.name.toLowerCase()}`}>Discover Pectrium {product.name} <span aria-hidden="true">↗</span></Link>
   </article>)}
  </section>
  <section className="shell product-family-outro"><div><p className="section-index">Built around needs</p><h2>Technology with a clear purpose.</h2></div><div><p>Each product addresses a different part of a connected digital experience. Availability varies: these are product directions and internal tooling, not a claim that every platform can already be used or purchased.</p><Link className="text-link" href="/solutions">Explore solutions <span aria-hidden="true">↗</span></Link></div></section>
