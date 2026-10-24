@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const products = [
- {name:"Flow",category:"Workflow systems",description:"A simpler way to organize requests, approvals, onboarding and everyday work.",capabilities:["Guided processes","Approvals and routing","Connected task journeys"],status:"In development"},
+ {name:"Flow",category:"Workflow systems",description:"A simpler way to organize requests, approvals, onboarding and everyday work.",capabilities:["Guided processes","Approvals and routing","Connected task journeys"],status:"Concept"},
  {name:"Assist",category:"Intelligent assistance",description:"AI-supported ways to find information, understand context and move through complex tasks.",capabilities:["Knowledge discovery","Contextual guidance","Human review"],status:"Concept"},
  {name:"Connect",category:"Connected services",description:"A foundation for bringing authorized applications, information and workflows together.",capabilities:["System integrations","Event-driven workflows","Access controls"],status:"Concept"},
  {name:"Insight",category:"Data intelligence",description:"Clearer views of information to help people understand operations and make informed decisions.",capabilities:["Reporting","Data quality","Decision support"],status:"Concept"},
