@@ -7,7 +7,7 @@ const directions=[
  {number:"03",title:"Connected infrastructure",description:"Consider the dependable foundations that digital products need as they evolve.",href:"/products"},
  {number:"04",title:"Useful information",description:"Turn disconnected data into clearer systems for understanding and decisions.",href:"/products"}
 ];
-const initiatives=["Quincestone","Emperor Armani","Clesla"];
+
 export default function Home(){return <PageFrame>
  <section className="pectrium-cinematic-hero" aria-labelledby="home-heading">
  <div className="pectrium-cinematic-image" role="img" aria-label="Original illustration of people moving through a connected public plaza and modern workplaces"/>
@@ -26,6 +26,5 @@ export default function Home(){return <PageFrame>
 </div></section>
  <section className="shell editorial-section"><p className="section-index">Technology / Approach</p><div><h2>Different challenges need different tools.</h2><p>Software engineering, AI, cloud systems and data practices provide different ways to approach a problem. Our technology focus is guided by usefulness, responsible design and maintainability.</p><Link className="text-link" href="/technology">Explore the technology <span aria-hidden="true">↗</span></Link>
  <div className="process-strip" aria-label="Technology development approach"><span>Understand the need</span><span>Explore the approach</span><span>Validate the result</span></div></div></section>
- <section className="editorial-band"><div className="shell editorial-section"><p className="section-index">Independent initiatives</p><div><h2>Distinct ideas, with room to grow.</h2><p>Three named initiatives are within the current development scope. Each has its own identity; descriptions and release stages will be added after verification.</p><div className="initiative-preview">{initiatives.map((name,i)=><div className="initiative-preview-row" key={name}><strong>{name}</strong><span>Details under review</span></div>)}</div><Link className="text-link" href="/ventures">Explore initiatives <span aria-hidden="true">↗</span></Link></div></div></section>
  <section className="shell home-bottom"><p className="section-index">The company</p><div><h2>Purpose before complexity.</h2><p>Learn about Pectrium’s direction, principles and approach to developing useful technology.</p><Link className="text-link" href="/company">Discover Pectrium <span aria-hidden="true">↗</span></Link></div></section>
  </PageFrame>;}
