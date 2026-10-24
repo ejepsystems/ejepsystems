@@ -1,8 +1,26 @@
 import Link from "next/link";
 import { FlowMark } from "./flow-mark";
-const links=[{href:"/solutions",label:"Solutions"},{href:"/company",label:"Company"},{href:"/technology",label:"Technology"},{href:"/ventures",label:"Initiatives"},{href:"/insights",label:"Insights"},{href:"/contact",label:"Contact"}];
-export function SiteFooter(){return <footer className="site-footer"><div className="shell footer-grid">
- <div className="footer-brand"><Link className="wordmark" href="/" aria-label="Pectrium home"><FlowMark className="brand-symbol"/>pectrium<span aria-hidden="true">.</span></Link><p className="footer-note">Technology built around real needs.</p></div>
- <nav aria-label="Footer navigation" className="footer-nav"><p className="footer-label">Explore</p>{links.map(l=><Link key={l.href} href={l.href}>{l.label}</Link>)}</nav>
- <div><p className="footer-label">Company information</p><p className="footer-note">Pectrium explores software, intelligent systems and digital infrastructure. Official contact and corporate disclosures will reflect verified information.</p></div>
- </div><div className="shell footer-bottom"><span>Pectrium · Technology company in development</span><a href="#main">Back to top ↑</a></div></footer>}
+
+const columns=[
+ {title:"Products",links:[["Flow","/products#flow"],["Assist","/products#assist"],["Connect","/products#connect"],["Insight","/products#insight"],["Studio","/products#studio"],["All products","/products"]]},
+ {title:"Solutions",links:[["Digital workflows","/solutions#workflows"],["Information clarity","/solutions#information"],["Connected operations","/solutions#connected"],["Data intelligence","/solutions#data"],["All solutions","/solutions"]]},
+ {title:"Explore",links:[["Technology","/technology"],["Initiatives","/ventures"],["Insights","/insights"]]},
+ {title:"Pectrium",links:[["Company","/company"],["Contact","/contact"]]}
+] as const;
+
+export function SiteFooter(){return <footer className="site-footer pectrium-footer">
+ <div className="shell pectrium-footer-intro">
+  <div><p className="pectrium-footer-eyebrow">Pectrium / Technology company</p><h2>Technology built<br/>around real needs.</h2></div>
+  <Link className="pectrium-footer-cta" href="/products#flow">Meet Pectrium Flow <span aria-hidden="true">↗</span></Link>
+ </div>
+ <div className="shell pectrium-footer-main">
+  <div className="pectrium-footer-brand">
+   <Link className="wordmark" href="/" aria-label="Pectrium home"><FlowMark className="brand-symbol"/>pectrium<span aria-hidden="true">.</span></Link>
+   <p>Software, intelligence and infrastructure shaped around useful experiences.</p>
+  </div>
+  <div className="pectrium-footer-columns">
+   {columns.map(column=><nav key={column.title} aria-label={`${column.title} footer links`} className="pectrium-footer-column"><h3>{column.title}</h3>{column.links.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}</nav>)}
+  </div>
+ </div>
+ <div className="shell pectrium-footer-bottom"><span>© {new Date().getFullYear()} Pectrium</span><span>Intelligent digital systems</span><a href="#main">Back to top ↑</a></div>
+ </footer>;}
