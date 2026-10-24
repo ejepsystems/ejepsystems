@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#090909">
+<title>Pectrium — Cinematic Review</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}html{background:#090909}body{margin:0;background:#090909;color:#f5f5f5;font:14px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px max(24px,5vw);border-bottom:1px solid #242424}.brand{font-weight:650;letter-spacing:-.055em;font-size:24px}.eyebrow{font-size:11px;color:#999;letter-spacing:.12em;text-transform:uppercase}
+main{max-width:1200px;margin:auto;padding:clamp(35px,5vw,72px) 24px 90px}h1{font-size:clamp(38px,5vw,68px);font-weight:500;letter-spacing:-.06em;line-height:1.08;margin:12px 0 16px}.intro{max-width:650px;margin-bottom:40px}.intro p,.note{color:#aaa;font-size:15px}
+.layout{display:grid;grid-template-columns:minmax(270px,420px) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.player{padding:9px;border:1px solid #333;background:#151515;border-radius:20px;box-shadow:0 30px 90px #0008}.player video{display:block;width:100%;aspect-ratio:9/16;max-height:75vh;border-radius:12px;object-fit:contain;background:#111}
+.chapters{margin-top:12px}.chapter{display:grid;grid-template-columns:45px 1fr 90px;align-items:baseline;border-bottom:1px solid #333;padding:19px 0}.chapter b{font-size:19px;font-weight:500}.chapter span,.chapter small{color:#888}.note{max-width:480px;margin-top:28px}
+a{color:#fff}.actions{margin-top:24px}.actions a{display:inline-block;padding:11px 19px;border:1px solid #555;border-radius:99px;text-decoration:none}.actions a:hover{background:#222}
+#asset-warning{display:none;color:#f1cba1;margin-top:14px}footer{border-top:1px solid #222;padding:30px 5vw;color:#888;font-size:12px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.player{width:100%;max-width:390px;margin:auto}header{padding:20px 24px}.chapter{grid-template-columns:40px 1fr 75px}}
+</style></head><body>
+<header><div class="brand">pectrium.</div><div class="eyebrow">Private creative review · Draft 01</div></header>
+<main><section class="intro"><div class="eyebrow">Cinematic experience / 24 seconds</div><h1>Technology built<br>around real needs.</h1><p>Four moments. One direction. A mobile-first exploration of focus, interaction, connection and possibility.</p></section>
+<section class="layout"><div><div class="player"><video controls autoplay muted loop playsinline preload="metadata" poster="/scene-01-approved.jpg"><source src="/pectrium-four-scenes-mobile-motion-preview.mp4" type="video/mp4">Video playback is unavailable.</video></div><p id="asset-warning" role="status">The approved film asset has not yet been added to this branch. This is the review shell, not the finished cinematic preview.</p></div>
+<div><div class="eyebrow">Film sequence</div><div class="chapters">
+<div class="chapter"><span>01</span><b>Focus</b><small>00–06s</small></div>
+<div class="chapter"><span>02</span><b>Interaction</b><small>06–12s</small></div>
+<div class="chapter"><span>03</span><b>Connection</b><small>12–18s</small></div>
+<div class="chapter"><span>04</span><b>Possibility</b><small>18–24s</small></div></div>
+<p class="note">Approved four-scene still-image motion study. Full live-action animation, realistic human movement and desktop 16:9 production remain separate review stages.</p>
+<div class="actions"><a href="/pectrium-four-scenes-mobile-motion-preview.mp4" download>Download film</a></div></div></section></main>
+<footer>PECTRIUM / CINEMATIC DEVELOPMENT — INTERNAL REVIEW ONLY</footer>
+<script>const v=document.querySelector('video');v.addEventListener('error',()=>document.getElementById('asset-warning').style.display='block',true);fetch('/pectrium-four-scenes-mobile-motion-preview.mp4',{method:'HEAD'}).then(r=>{if(!r.ok)document.getElementById('asset-warning').style.display='block'}).catch(()=>document.getElementById('asset-warning').style.display='block');</script>
+</body></html>
