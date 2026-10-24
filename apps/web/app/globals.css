@@ -612,3 +612,33 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .pectrium-cinematic-inner { padding-top:22px;padding-bottom:24px; }
  .pectrium-cinematic-content h1 { font-size:30px; }
 }
+
+/* Pectrium Typography Authority 01: uniform page headings across all routes.
+   Manrope is a licensed open-source visual alternative; Mercuryo's exact
+   proprietary font is not claimed or copied. The Geist brand wordmark remains. */
+:root {
+ --pct-heading-font:var(--font-display), Arial, sans-serif;
+ --pct-heading-1:64px;
+ --pct-heading-2:42px;
+ --pct-heading-3:28px;
+ --pct-heading-weight:500;
+ --pct-heading-leading:1.12;
+ --pct-heading-tracking:-.025em;
+ --pct-heading-gap:20px;
+}
+h1, h2, h3 {
+ font-family:var(--pct-heading-font);
+ font-weight:var(--pct-heading-weight);
+ line-height:var(--pct-heading-leading);
+ letter-spacing:var(--pct-heading-tracking);
+}
+:is(.hero,.home-hero,.inner-hero,.pectrium-cinematic-content) h1,
+h1 { font-size:var(--pct-heading-1);font-family:var(--pct-heading-font);font-weight:var(--pct-heading-weight);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking); }
+:is(.directory-intro,.home-bottom,.editorial-section,.feature-copy,.statement,.section-heading,.foundation,.status,.pectrium-solution-top,.pectrium-detail-intro,.pectrium-detail-next,.pectrium-detail-band,.pectrium-footer-intro,.product-family-card,.product-family-outro,.venture-row,.solution-row,.initiative-preview-row) h2,
+h2 { font-size:var(--pct-heading-2);font-family:var(--pct-heading-font);font-weight:var(--pct-heading-weight);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking); }
+:is(.editorial-rows,.pectrium-detail-cards) h3,
+h3 { font-size:var(--pct-heading-3);font-family:var(--pct-heading-font);font-weight:var(--pct-heading-weight);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking); }
+@media(max-width:767px) {
+ :root { --pct-heading-1:36px;--pct-heading-2:28px;--pct-heading-3:21px;--pct-heading-gap:16px; }
+ .pectrium-cinematic-content h1 { font-size:var(--pct-heading-1);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking);font-weight:var(--pct-heading-weight); }
+}
