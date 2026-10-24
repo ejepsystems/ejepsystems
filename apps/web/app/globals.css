@@ -567,3 +567,78 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .pectrium-film-controls { bottom:16px; }
 }
 @media(prefers-reduced-motion:reduce) { .pectrium-film-frame video { visibility:hidden; } }
+
+/* Mobile-first above-the-fold editorial composition (Mercuryo-inspired proportions,
+   independent Pectrium visual identity). Desktop retains descriptive copy. */
+@media (max-width:767px) {
+ .pectrium-cinematic-hero { min-height:0; }
+ .pectrium-cinematic-image {
+  height:clamp(230px,40svh,390px);
+  margin:10px 10px 0;
+  border-radius:16px;
+  background-position:center center;
+ }
+ .pectrium-cinematic-inner {
+  width:100%;
+  padding:clamp(24px,4.3svh,38px) 22px clamp(28px,4.5svh,44px);
+  align-items:center;
+  text-align:center;
+ }
+ .pectrium-cinematic-content { width:100%;max-width:440px; }
+ .pectrium-cinematic-content h1 {
+  font-size:clamp(30px,8.25vw,39px);
+  font-weight:600;
+  line-height:1.09;
+  letter-spacing:-.05em;
+  max-width:13ch;
+  margin-inline:auto;
+  text-wrap:balance;
+ }
+ .pectrium-cinematic-deck { display:none; }
+ .pectrium-cinematic-cta {
+  margin-top:clamp(18px,2.9svh,26px);
+  min-height:48px;
+  min-width:min(100%,240px);
+  max-width:300px;
+  justify-content:space-between;
+  padding:0 22px;
+  border-radius:999px;
+  font-size:14px;
+ }
+ .pectrium-film-controls { bottom:12px; }
+}
+@media (max-width:360px) {
+ .pectrium-cinematic-image { height:clamp(210px,37svh,340px); }
+ .pectrium-cinematic-inner { padding-top:22px;padding-bottom:24px; }
+ .pectrium-cinematic-content h1 { font-size:30px; }
+}
+
+/* Pectrium Typography Authority 01: uniform page headings across all routes.
+   Manrope is a licensed open-source visual alternative; Mercuryo's exact
+   proprietary font is not claimed or copied. The Geist brand wordmark remains. */
+:root {
+ --pct-heading-font:var(--font-display), Arial, sans-serif;
+ --pct-heading-1:64px;
+ --pct-heading-2:42px;
+ --pct-heading-3:28px;
+ --pct-heading-weight:500;
+ --pct-heading-leading:1.12;
+ --pct-heading-tracking:-.025em;
+ --pct-heading-gap:20px;
+}
+h1, h2, h3 {
+ font-family:var(--pct-heading-font);
+ font-weight:var(--pct-heading-weight);
+ line-height:var(--pct-heading-leading);
+ letter-spacing:var(--pct-heading-tracking);
+}
+:is(.hero,.home-hero,.inner-hero,.pectrium-cinematic-content) h1,
+h1 { font-size:var(--pct-heading-1);font-family:var(--pct-heading-font);font-weight:var(--pct-heading-weight);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking); }
+:is(.directory-intro,.home-bottom,.editorial-section,.feature-copy,.statement,.section-heading,.foundation,.status,.pectrium-solution-top,.pectrium-detail-intro,.pectrium-detail-next,.pectrium-detail-band,.pectrium-footer-intro,.product-family-card,.product-family-outro,.venture-row,.solution-row,.initiative-preview-row) h2,
+h2 { font-size:var(--pct-heading-2);font-family:var(--pct-heading-font);font-weight:var(--pct-heading-weight);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking); }
+:is(.editorial-rows,.pectrium-detail-cards) h3,
+h3 { font-size:var(--pct-heading-3);font-family:var(--pct-heading-font);font-weight:var(--pct-heading-weight);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking); }
+@media(max-width:767px) {
+ :root { --pct-heading-1:36px;--pct-heading-2:28px;--pct-heading-3:21px;--pct-heading-gap:16px; }
+ .pectrium-cinematic-content h1 { font-size:var(--pct-heading-1);line-height:var(--pct-heading-leading);letter-spacing:var(--pct-heading-tracking);font-weight:var(--pct-heading-weight); }
+}

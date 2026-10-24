@@ -18,7 +18,7 @@ export default function Home(){return <PageFrame>
    <p className="eyebrow">Software · Intelligence · Infrastructure</p>
    <h1 id="home-heading">Technology built<br/>around real needs.</h1>
    <p className="pectrium-cinematic-deck">Software and intelligent systems that make everyday work simpler and more connected.</p>
-   <Link className="pectrium-cinematic-cta" href="/products">Discover our products <span aria-hidden="true">↗</span></Link>
+   <Link className="pectrium-cinematic-cta" href="/products">Discover more <span aria-hidden="true">↗</span></Link>
   </div>
  </div>
  </section>
