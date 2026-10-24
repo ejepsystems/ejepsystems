@@ -2,10 +2,10 @@ import Link from "next/link";
 import { PageFrame } from "@/components/page-frame";
 
 const directions=[
- {number:"01",title:"Everyday work",description:"Make requests, services and daily tasks simpler to manage.",href:"/solutions#workflows"},
- {number:"02",title:"Learning and knowledge",description:"Help people find guidance and understand information more easily.",href:"/solutions#information"},
- {number:"03",title:"People and places",description:"Connect people with useful services, opportunities and updates.",href:"/solutions#connected"},
- {number:"04",title:"Clearer decisions",description:"Make scattered information easier to understand and act on.",href:"/solutions#data"}
+ {number:"01",title:"Everyday work",description:"Make requests, services and daily tasks simpler to manage.",href:"/solutions/work-and-services"},
+ {number:"02",title:"Learning and knowledge",description:"Help people find guidance and understand information more easily.",href:"/solutions/learning-and-intelligence"},
+ {number:"03",title:"People and places",description:"Connect people with useful services, opportunities and updates.",href:"/solutions/connected-communities"},
+ {number:"04",title:"Clearer decisions",description:"Make scattered information easier to understand and act on.",href:"/solutions/learning-and-intelligence"}
 ];
 
 export default function Home(){return <PageFrame>
@@ -17,7 +17,7 @@ export default function Home(){return <PageFrame>
    <p className="eyebrow">Software · Intelligence · Infrastructure</p>
    <h1 id="home-heading">Technology built<br/>around real needs.</h1>
    <p className="pectrium-cinematic-deck">Software and intelligent systems that make everyday work simpler and more connected.</p>
-   <Link className="pectrium-cinematic-cta" href="/products#flow">Meet Pectrium Flow <span aria-hidden="true">↗</span></Link>
+   <Link className="pectrium-cinematic-cta" href="/products/flow">Meet Pectrium Flow <span aria-hidden="true">↗</span></Link>
   </div>
  </div>
  </section>
