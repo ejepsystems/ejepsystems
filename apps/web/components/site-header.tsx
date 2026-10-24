@@ -6,17 +6,16 @@ import { useEffect, useRef, useState } from "react";
 
 const sections = [
  {href:"/products",label:"Products",description:"Software for work, intelligence and connected systems.",children:[
-  {href:"/products#flow",label:"Flow",detail:"Workflow systems"},
-  {href:"/products#assist",label:"Assist",detail:"Intelligent assistance"},
-  {href:"/products#connect",label:"Connect",detail:"Connected services"},
-  {href:"/products#insight",label:"Insight",detail:"Data intelligence"},
-  {href:"/products#studio",label:"Studio",detail:"Internal engineering"}
+  {href:"/products/flow",label:"Flow",detail:"Workflow systems"},
+  {href:"/products/assist",label:"Assist",detail:"Intelligent assistance"},
+  {href:"/products/connect",label:"Connect",detail:"Connected services"},
+  {href:"/products/insight",label:"Insight",detail:"Data intelligence"},
+  {href:"/products/studio",label:"Studio",detail:"Internal engineering"}
  ]},
- {href:"/solutions",label:"Solutions",description:"Designed around the work people need to do.",children:[
-  {href:"/solutions#workflows",label:"Digital workflows",detail:"Make everyday tasks easier"},
-  {href:"/solutions#information",label:"Information clarity",detail:"Find what matters"},
-  {href:"/solutions#connected",label:"Connected operations",detail:"Bring systems together"},
-  {href:"/solutions#data",label:"Data intelligence",detail:"Understand information"}
+ {href:"/solutions",label:"Solutions",description:"Technology designed around real-world needs.",children:[
+  {href:"/solutions/work-and-services",label:"Work and services",detail:"Simpler everyday journeys"},
+  {href:"/solutions/learning-and-intelligence",label:"Learning and intelligence",detail:"Knowledge and clarity"},
+  {href:"/solutions/connected-communities",label:"Connected communities",detail:"People, places and opportunity"}
  ]},
  {href:"/company",label:"Company",description:"The thinking behind Pectrium."},
  {href:"/technology",label:"Technology",description:"The disciplines behind our products."},
@@ -43,8 +42,8 @@ export function SiteHeader(){
   <div className="shell header-inner">
    <Link className="wordmark" href="/" aria-label="Pectrium home" onClick={()=>setOpen(false)}><FlowMark className="brand-symbol"/>pectrium<span aria-hidden="true">.</span></Link>
    <nav className="desktop-nav" aria-label="Primary navigation"><ul className="nav-list">{sections.map(section=><li key={section.href}><Link aria-current={pathname===section.href?"page":undefined} href={section.href}>{section.label}</Link></li>)}</ul></nav>
-   <Link className="header-link" href="/products#flow">Meet Flow <span aria-hidden="true">↗</span></Link>
-   <Link className="mobile-header-cta" href="/products#flow" onClick={()=>setOpen(false)}>Flow <span aria-hidden="true">↗</span></Link>
+   <Link className="header-link" href="/products/flow">Meet Flow <span aria-hidden="true">↗</span></Link>
+   <Link className="mobile-header-cta" href="/products/flow" onClick={()=>setOpen(false)}>Flow <span aria-hidden="true">↗</span></Link>
    <button ref={toggleRef} className="mobile-menu-toggle" type="button" aria-label={open?"Close navigation":"Open navigation"} aria-expanded={open} aria-controls="mobile-site-nav" onClick={()=>setOpen(v=>!v)}><span className="menu-label">{open?"Close":"Menu"}</span><span className="menu-glyph" aria-hidden="true">{open?"×":"☰"}</span></button>
   </div>
   <nav id="mobile-site-nav" className={open?"mobile-site-nav pectrium-mobile-drawer is-open":"mobile-site-nav pectrium-mobile-drawer"} aria-label="Mobile navigation" inert={!open}>
