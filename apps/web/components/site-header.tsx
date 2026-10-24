@@ -4,6 +4,7 @@ import { FlowMark } from "./flow-mark";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 const links = [
+  {href:"/products",label:"Products"},
   {href:"/solutions",label:"Solutions"},
   {href:"/company",label:"Company"},
   {href:"/technology",label:"Technology"},
