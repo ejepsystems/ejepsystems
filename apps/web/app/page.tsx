@@ -9,13 +9,19 @@ const directions=[
 ];
 const initiatives=["Quincestone","Emperor Armani","Clesla"];
 export default function Home(){return <PageFrame>
- <section className="shell home-hero"><div className="home-hero-content">
-  <p className="eyebrow">Pectrium / Independent technology company</p>
-  <h1>Technology built <span>around real needs.</span></h1>
-  <p className="hero-deck">Pectrium explores software, intelligent systems and digital infrastructure with a focus on making complex experiences simpler and more useful.</p>
-  <div className="hero-actions"><Link className="button button-primary" href="/solutions">Explore our focus <span aria-hidden="true">↗</span></Link><Link className="text-link" href="/company">About Pectrium <span aria-hidden="true">→</span></Link></div>
- </div><div className="home-hero-aside" aria-hidden="true"><span className="aside-index">PECTRIUM / 001</span><div className="aside-lines"><span/><span/><span/><span/></div><span className="aside-caption">Explore · Design · Develop</span></div></section>
- <section className="shell editorial-feature" aria-labelledby="feature-heading"><div className="feature-art" role="img" aria-label="Illustrated people moving through a connected civic plaza and modern workplaces"><span className="feature-art-caption">PECTRIUM / HUMAN SYSTEMS IN MOTION</span></div><div className="feature-copy"><p className="feature-kicker">Technology / Possibility</p><h2 id="feature-heading">Making complex experiences feel simpler.</h2><p>Explore the needs and ideas shaping Pectrium’s direction.</p><Link className="feature-cta" href="/solutions"><span>Discover our focus</span><span className="feature-cta-arrow" aria-hidden="true">↗</span></Link></div></section>
+ <section className="pectrium-cinematic-hero" aria-labelledby="home-heading">
+ <div className="pectrium-cinematic-image" role="img" aria-label="Original illustration of people moving through a connected public plaza and modern workplaces"/>
+ <div className="pectrium-cinematic-shade" aria-hidden="true"/>
+ <div className="shell pectrium-cinematic-inner">
+  <div className="pectrium-cinematic-content">
+   <p className="eyebrow">Pectrium / Independent technology company</p>
+   <h1 id="home-heading">Technology built<br/>around real needs.</h1>
+   <p className="pectrium-cinematic-deck">Exploring software, intelligent systems and digital infrastructure for more useful experiences.</p>
+   <Link className="pectrium-cinematic-cta" href="/solutions">Explore our focus <span aria-hidden="true">↗</span></Link>
+  </div>
+  <span className="pectrium-cinematic-label">Human systems in motion / An original illustration</span>
+ </div>
+ </section>
  <section className="home-directory" id="solutions"><div className="shell"><div className="directory-intro"><p className="section-index">Solutions / Focus</p><h2>Start with the problem, not the technology.</h2></div>
  <div className="directory-grid">{directions.map(s=><Link className="directory-card" href={s.href} key={s.number}><span className="directory-num">{s.number} / 04</span><span className="directory-title">{s.title}<span aria-hidden="true">↗</span></span><span className="directory-description">{s.description}</span></Link>)}</div>
  <p className="solution-disclosure">These are areas of exploration, not a catalog of currently available commercial services.</p></div></section>
