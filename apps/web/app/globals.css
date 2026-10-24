@@ -530,3 +530,14 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
 .pectrium-hero-video { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
 @media(max-width:767px) { .pectrium-hero-video { object-position:50% 45%; } }
 @media(prefers-reduced-motion:reduce) { .pectrium-hero-video { display:none; } }
+
+
+/* Original motion alternative: atmospheric light, connection and movement, no external footage */
+.pectrium-cinematic-image.pectrium-motion-alternative { overflow:hidden; background:radial-gradient(ellipse at 77% 40%,#293a40 0%,#121d23 39%,#05090e 78%); }
+.pectrium-motion-atmosphere { position:absolute; inset:-20%; overflow:hidden; filter:blur(1px); }
+.pectrium-motion-atmosphere span { position:absolute; display:block; border:1px solid rgba(172,213,220,.25); border-radius:50%; transform:rotate(-24deg); }
+.pectrium-motion-atmosphere span:nth-child(1) { width:78%;height:105%;right:-12%;top:2%;box-shadow:0 0 80px rgba(105,163,176,.16),inset 0 0 50px rgba(117,179,194,.08);animation:pectrium-drift 19s ease-in-out infinite alternate; }
+.pectrium-motion-atmosphere span:nth-child(2) { width:56%;height:80%;right:4%;top:16%;border-color:rgba(231,222,191,.24);box-shadow:0 0 90px rgba(230,198,140,.1);animation:pectrium-drift 24s ease-in-out infinite alternate-reverse; }
+.pectrium-motion-atmosphere span:nth-child(3) { width:37%;height:60%;right:14%;top:24%;border-color:rgba(205,233,233,.22);box-shadow:0 0 110px rgba(102,162,170,.12);animation:pectrium-drift 14s ease-in-out infinite alternate; }
+@keyframes pectrium-drift { from { transform:translate3d(-3%,2%,0) rotate(-24deg) scale(.97);opacity:.55; } to { transform:translate3d(4%,-3%,0) rotate(-18deg) scale(1.07);opacity:1; } }
+@media(prefers-reduced-motion:reduce){.pectrium-motion-atmosphere span { animation:none!important; }}
