@@ -524,3 +524,9 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .pectrium-detail-cards article { min-height:165px; padding:24px; }
  .pectrium-detail-band h2 { margin-bottom:30px; }
 }
+
+
+/* Original Pectrium film: media slot preserves fallback and headline legibility */
+.pectrium-hero-video { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+@media(max-width:767px) { .pectrium-hero-video { object-position:50% 45%; } }
+@media(prefers-reduced-motion:reduce) { .pectrium-hero-video { display:none; } }
