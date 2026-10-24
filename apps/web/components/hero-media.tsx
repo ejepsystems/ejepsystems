@@ -5,7 +5,9 @@
  */
 export function HeroMedia() {
  const enabled=process.env.NEXT_PUBLIC_PECTRIUM_HERO_VIDEO_ENABLED==="true";
- return <div className="pectrium-cinematic-image" aria-hidden="true">
+ const alternative=!enabled && process.env.NEXT_PUBLIC_PECTRIUM_HERO_MOTION_ALTERNATIVE==="true";
+ return <div className={`pectrium-cinematic-image${alternative?" pectrium-motion-alternative":""}`} aria-hidden="true">
+  {alternative?<div className="pectrium-motion-atmosphere"><span/><span/><span/></div>:null}
   {enabled?<video className="pectrium-hero-video" autoPlay muted loop playsInline preload="metadata" disablePictureInPicture tabIndex={-1} poster="/media/pectrium/hero/human-systems-poster.webp">
    <source media="(max-width: 767px)" src="/media/pectrium/hero/human-systems-mobile.webm" type="video/webm"/>
    <source media="(max-width: 767px)" src="/media/pectrium/hero/human-systems-mobile.mp4" type="video/mp4"/>
