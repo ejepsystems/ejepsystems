@@ -567,3 +567,48 @@ body { font-size: var(--pct-type-body); line-height: var(--pct-leading-body); }
  .pectrium-film-controls { bottom:16px; }
 }
 @media(prefers-reduced-motion:reduce) { .pectrium-film-frame video { visibility:hidden; } }
+
+/* Mobile-first above-the-fold editorial composition (Mercuryo-inspired proportions,
+   independent Pectrium visual identity). Desktop retains descriptive copy. */
+@media (max-width:767px) {
+ .pectrium-cinematic-hero { min-height:0; }
+ .pectrium-cinematic-image {
+  height:clamp(230px,40svh,390px);
+  margin:10px 10px 0;
+  border-radius:16px;
+  background-position:center center;
+ }
+ .pectrium-cinematic-inner {
+  width:100%;
+  padding:clamp(24px,4.3svh,38px) 22px clamp(28px,4.5svh,44px);
+  align-items:center;
+  text-align:center;
+ }
+ .pectrium-cinematic-content { width:100%;max-width:440px; }
+ .pectrium-cinematic-content h1 {
+  font-size:clamp(30px,8.25vw,39px);
+  font-weight:600;
+  line-height:1.09;
+  letter-spacing:-.05em;
+  max-width:13ch;
+  margin-inline:auto;
+  text-wrap:balance;
+ }
+ .pectrium-cinematic-deck { display:none; }
+ .pectrium-cinematic-cta {
+  margin-top:clamp(18px,2.9svh,26px);
+  min-height:48px;
+  min-width:min(100%,240px);
+  max-width:300px;
+  justify-content:space-between;
+  padding:0 22px;
+  border-radius:999px;
+  font-size:14px;
+ }
+ .pectrium-film-controls { bottom:12px; }
+}
+@media (max-width:360px) {
+ .pectrium-cinematic-image { height:clamp(210px,37svh,340px); }
+ .pectrium-cinematic-inner { padding-top:22px;padding-bottom:24px; }
+ .pectrium-cinematic-content h1 { font-size:30px; }
+}
