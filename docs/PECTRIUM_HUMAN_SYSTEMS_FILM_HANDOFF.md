@@ -1,22 +1,30 @@
-# Pectrium Human Systems Film — production handoff
+# Pectrium Human Systems in Motion — approved media integration
 
-## Creative authority
-Original 12-second, seamless, silent, cinematic film about a real person interacting with useful technology. Do not reproduce Mercuryo's sailboat footage, branded interface or visual motifs. The narrative: person enters workspace → operates laptop and meaningful digital tool → wider collaboration and connected modern environment → human movement across connected places. Editorial realism, controlled camera movement, sophisticated contrast, warm human highlights, restrained palette. Avoid synthetic floating holograms, fake product screens, unverified claims, stock-looking scenes or identifiable third-party brands.
+## Approved 24-second edit
+Eight user-supplied images, animated into a silent 24-second editorial motion film. This is an animated-image edit, not newly filmed footage. Four chapters, each six seconds:
+- 00:00–00:06 Focus
+- 00:06–00:12 Interaction
+- 00:12–00:18 Connection
+- 00:18–00:24 Possibility
 
-## Deliverables
-- `apps/web/public/media/pectrium/hero/human-systems-mobile.webm` — 9:16 portrait, optimized
-- `apps/web/public/media/pectrium/hero/human-systems-mobile.mp4` — H.264 fallback
-- `apps/web/public/media/pectrium/hero/human-systems-desktop.webm` — 16:9 landscape
-- `apps/web/public/media/pectrium/hero/human-systems-desktop.mp4` — H.264 fallback
-- `apps/web/public/media/pectrium/hero/human-systems-poster.webp` — still frame poster
+Approved copy: **Technology built around real needs.**
+Approved CTA: **Discover our products** → `/products`.
 
-Video: 12 seconds, silent, seamless loop, no embedded text/logo/CTA, 24–30 fps. Compose subject away from headline safe zone on desktop. On mobile, film can be a separate dominant media panel; preserve legibility and no horizontal overflow. Optimize for real-world network constraints. Include a static fallback.
+## Required media installation
+Place the three approved media files in `apps/web/public/media/pectrium/hero/`:
 
-## Integration
-`apps/web/components/hero-media.tsx` renders existing illustrated fallback by default. The approved files must exist and be inspected before enabling `NEXT_PUBLIC_PECTRIUM_HERO_VIDEO_ENABLED=true` on a review deployment. Do not set this flag without all assets. White HTML headline and CTA remain live DOM content. Reduced-motion preference hides video and reveals existing static background.
+- `human-systems-mobile.mp4` (540 × 960, 24 seconds)
+- `human-systems-desktop.mp4` (960 × 540, 24 seconds)
+- `human-systems-poster.webp`
 
-## Release gates
-Confirm rights to all footage and music (silent preferred). Review mobile 320/375/390/428px and desktop 768/1024/1440px. Test autoplay mute/inline, looping, dark overlay readability, first-frame load, reduced-motion, media failure, mobile bandwidth and contrast. Pass GitHub lint, typecheck, build and CI. Keep PR #5 draft and production unchanged until explicit release approval.
+The review package `pectrium-approved-media.zip` contains these exact names under `media/pectrium/hero/` (the package paths are relative to `apps/web/public/`).
 
-## Film-generation connection
-Figma Weave account link currently required. Generate only after user approves any quoted credit cost. No cinematic footage has yet been generated or installed.
+The GitHub connector used for the source edits only writes UTF-8 text, so binary MP4 files were **not** committed to the repository. Do not activate video until those files are uploaded.
+
+After assets are present, set `NEXT_PUBLIC_PECTRIUM_HERO_VIDEO_ENABLED=true` for a **preview** build and redeploy. The code currently keeps this feature disabled by default, so no missing video is requested. Keep production unchanged pending graphical QA.
+
+## Implementation
+`apps/web/components/hero-media.tsx` contains a single video player with four chapter indicators and play/pause control. The homepage places the media above a separate dark editorial headline panel on mobile. Desktop retains the dark editorial overlay. `prefers-reduced-motion` hides moving video, leaving a static background; inspect that background and poster in a real browser before launch.
+
+## Acceptance
+Verify exact asset responses 200, both mobile and desktop source selection, muted inline autoplay, chapter seek controls, six-second progress indicators, play/pause, loop, fallback, accessible labels, reduced motion, typography and CTA at 320/375/390/428/768/1024/1440 widths, and CI/build. Keep PR #5 draft and do not promote production without explicit release approval.
