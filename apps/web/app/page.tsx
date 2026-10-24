@@ -2,10 +2,10 @@ import Link from "next/link";
 import { PageFrame } from "@/components/page-frame";
 
 const directions=[
- {number:"01",title:"Digital experiences",description:"Make fragmented tasks and services easier to navigate through considered software.",href:"/products"},
- {number:"02",title:"Intelligent assistance",description:"Explore where AI can help people understand information and complete meaningful work.",href:"/products"},
- {number:"03",title:"Connected infrastructure",description:"Consider the dependable foundations that digital products need as they evolve.",href:"/products"},
- {number:"04",title:"Useful information",description:"Turn disconnected data into clearer systems for understanding and decisions.",href:"/products"}
+ {number:"01",title:"Everyday work",description:"Make requests, services and daily tasks simpler to manage.",href:"/solutions#workflows"},
+ {number:"02",title:"Learning and knowledge",description:"Help people find guidance and understand information more easily.",href:"/solutions#information"},
+ {number:"03",title:"People and places",description:"Connect people with useful services, opportunities and updates.",href:"/solutions#connected"},
+ {number:"04",title:"Clearer decisions",description:"Make scattered information easier to understand and act on.",href:"/solutions#data"}
 ];
 
 export default function Home(){return <PageFrame>
